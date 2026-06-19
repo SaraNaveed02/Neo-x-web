@@ -1,0 +1,262 @@
+/* Unified Infotech homepage — additional sections */
+.ui-home-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.ui-home-pillar {
+    background: var(--ui-ref-card, #111);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.ui-home-pillar h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ui-ref-accent, #2dd4bf);
+    margin-bottom: 0.75rem;
+}
+
+.ui-home-pillar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ui-home-pillar li {
+    margin-bottom: 0.35rem;
+}
+
+.ui-home-pillar a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.88rem;
+}
+
+.ui-home-pillar a:hover { color: var(--ui-ref-accent, #2dd4bf); }
+
+.ui-home-offerings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.ui-home-offering {
+    padding: 0.5rem 1.1rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.ui-home-trust-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.ui-home-trust-pills span {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.75);
+}
+
+.ui-home-trust-pills strong { color: #fff; }
+
+.ui-client-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+}
+
+.ui-client-logos span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.5);
+    padding: 0.35rem 0.75rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+}
+
+.ui-testimonial-names {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.ui-testimonial-name {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02);
+}
+
+.ui-testimonial-name strong {
+    display: block;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.ui-testimonial-name span {
+    display: block;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+    margin-top: 0.25rem;
+}
+
+.ui-press-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.ui-press-card {
+    background: var(--ui-ref-card, #111);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.ui-press-card h4 {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.ui-press-card .tag {
+    font-size: 0.72rem;
+    color: var(--ui-ref-accent, #2dd4bf);
+    text-transform: uppercase;
+}
+
+.ui-careers-band {
+    background: linear-gradient(135deg, rgba(45,212,191,0.12), rgba(99,102,241,0.12));
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.ui-form-upload {
+    border: 2px dashed rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.ui-form-upload small {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.ui-form-captcha {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.ui-form-captcha input {
+    width: 80px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+.ui-char-count {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    text-align: right;
+}
+
+.ui-process-card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.ui-process-note {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.ui-industry-panel em {
+    display: block;
+    margin-top: 0.75rem;
+    color: var(--ui-ref-accent, #2dd4bf);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.ui-resource-card .meta-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0.35rem 0;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+}
+
+.ui-resource-card .author {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.65);
+    margin-top: 0.5rem;
+}
+
+.ui-footer-unified .ui-footer-offices strong {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.35rem;
+}
+
+.ui-footer-unified a { color: rgba(255,255,255,0.65); }
+
+.ui-footer-mail h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+/* Wider services mega menu */
+.ui-mega .ui-mega-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    max-width: 1200px;
+}
+
+.ui-mega-case p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+    margin: 0.35rem 0 0;
+    line-height: 1.45;
+}
+
+.ui-mega-case h5 {
+    font-size: 0.85rem;
+    margin: 0.35rem 0;
+    line-height: 1.35;
+    color: #fff;
+}

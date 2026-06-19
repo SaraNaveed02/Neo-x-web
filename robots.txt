@@ -1,0 +1,10 @@
+# Allow all search engines
+User-agent: *
+Allow: /time/project/
+Allow: /time/project/app.html
+Disallow: /time/backend/admin/
+Disallow: /time/backend/install.php
+Disallow: /time/backend/confirm.php
+Disallow: /time/backend/database/
+
+Sitemap: /time/sitemap.xml

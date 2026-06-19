@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Social media">
+  <rect width="640" height="400" fill="#030806"/>
+  <circle cx="200" cy="180" r="70" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="2"/>
+  <circle cx="320" cy="150" r="70" fill="rgba(34,197,94,0.2)" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="440" cy="180" r="70" fill="rgba(250,204,21,0.12)" stroke="#facc15" stroke-width="2"/>
+  <path d="M260 180 L280 180 M360 150 L380 150" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <rect x="120" y="260" width="400" height="50" rx="25" fill="rgba(255,255,255,0.06)" stroke="rgba(74,222,128,0.2)"/>
+  <text x="320" y="360" text-anchor="middle" fill="#4ade80" font-family="Inter,sans-serif" font-size="22" font-weight="700">Social Media</text>
+</svg>

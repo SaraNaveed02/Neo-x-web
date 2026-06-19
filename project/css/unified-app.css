@@ -1,0 +1,406 @@
+/**
+ * NEOXWEB — Modern Web Application Shell
+ * SPA feel, progress bar, loader, mobile dock, search
+ */
+
+:root {
+    --app-dock-h: 64px;
+    --app-progress-h: 3px;
+}
+
+body.unified-app {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+@media (max-width: 768px) {
+    body.unified-app.has-dock {
+        padding-bottom: calc(var(--app-dock-h) + env(safe-area-inset-bottom, 0));
+    }
+}
+
+/* Progress bar */
+.app-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: var(--app-progress-h);
+    width: 0%;
+    background: linear-gradient(90deg, var(--ui-blue), #6366f1, #10b981);
+    z-index: 10001;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 87, 255, 0.5);
+}
+
+.app-progress.active { width: 70%; transition: width 2s ease; }
+.app-progress.done { width: 100%; transition: width 0.2s ease; }
+
+/* Full-screen loader */
+.app-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    transition: opacity 0.4s, visibility 0.4s;
+}
+
+.app-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.app-loader__logo {
+    font-family: var(--ui-display);
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: var(--ui-navy);
+}
+
+.app-loader__logo span { color: var(--ui-blue); }
+
+.app-loader__spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--ui-border);
+    border-top-color: var(--ui-blue);
+    border-radius: 50%;
+    animation: appSpin 0.8s linear infinite;
+}
+
+@keyframes appSpin { to { transform: rotate(360deg); } }
+
+/* Page transition */
+#app-main {
+    min-height: 60vh;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#app-main.app-main-loading {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+#app-main.app-main-enter {
+    animation: appMainIn 0.35s ease forwards;
+}
+
+@keyframes appMainIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header scroll state */
+.ui-header.ui-header--scrolled {
+    box-shadow: var(--ui-shadow);
+    height: 60px;
+}
+
+.ui-header.ui-header--scrolled .ui-logo { font-size: 1.2rem; }
+
+/* Search modal */
+.app-search-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 22, 40, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s;
+}
+
+.app-search-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.app-search-panel {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    width: min(560px, 92vw);
+    background: #fff;
+    border-radius: var(--ui-radius-lg);
+    box-shadow: var(--ui-shadow-lg);
+    padding: 1.25rem;
+    z-index: 2001;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s;
+}
+
+.app-search-backdrop.open + .app-search-panel,
+.app-search-panel.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.app-search-input {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.75rem;
+    border: 2px solid var(--ui-border);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.app-search-input:focus { border-color: var(--ui-blue); }
+
+.app-search-wrap { position: relative; margin-bottom: 0.75rem; }
+.app-search-wrap i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--ui-muted);
+}
+
+.app-search-results { max-height: 280px; overflow-y: auto; }
+.app-search-results a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--ui-text);
+    font-size: 0.9rem;
+}
+
+.app-search-results a:hover { background: var(--ui-bg-soft); color: var(--ui-blue); }
+.app-search-results a i { color: var(--ui-blue); width: 1.25rem; text-align: center; }
+
+.ui-btn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--ui-border);
+    background: #fff;
+    color: var(--ui-text);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: 0.2s;
+}
+
+.ui-btn-icon:hover { border-color: var(--ui-blue); color: var(--ui-blue); }
+
+/* Toast */
+.app-toast-stack {
+    position: fixed;
+    bottom: calc(1.5rem + env(safe-area-inset-bottom, 0));
+    right: 1rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    body.unified-app.has-dock .app-toast-stack {
+        bottom: calc(var(--app-dock-h) + 1rem);
+    }
+}
+
+.app-toast {
+    padding: 0.75rem 1.25rem;
+    background: var(--ui-navy);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    box-shadow: var(--ui-shadow-lg);
+    animation: appToastIn 0.3s ease;
+    pointer-events: auto;
+}
+
+.app-toast.success { background: #059669; }
+.app-toast.error { background: #dc2626; }
+
+@keyframes appToastIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Mobile dock */
+.app-mobile-dock {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--app-dock-h);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--ui-border);
+    z-index: 998;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+@media (max-width: 768px) {
+    .app-mobile-dock { display: flex; }
+}
+
+.app-mobile-dock a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    text-decoration: none;
+    color: var(--ui-muted);
+    font-size: 0.65rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.app-mobile-dock a i { font-size: 1.15rem; }
+.app-mobile-dock a.active,
+.app-mobile-dock a:hover { color: var(--ui-blue); }
+
+/* Trust marquee */
+.ui-trust-marquee {
+    padding: 1.25rem 0;
+    background: #fff;
+    border-bottom: 1px solid var(--ui-border);
+    overflow: hidden;
+}
+
+.ui-trust-marquee__track {
+    display: flex;
+    gap: 3rem;
+    animation: uiMarquee 28s linear infinite;
+    width: max-content;
+}
+
+.ui-trust-marquee__track span {
+    font-family: var(--ui-display);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--ui-muted);
+    white-space: nowrap;
+    opacity: 0.7;
+}
+
+@keyframes uiMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Clutch badge */
+.ui-clutch-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 1px solid var(--ui-border);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--ui-shadow);
+}
+
+.ui-clutch-badge strong { color: var(--ui-blue); font-size: 1.1rem; }
+
+/* Case study slider */
+.ui-cs-slider-wrap { position: relative; }
+.ui-cs-slider {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 0.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.ui-cs-slider::-webkit-scrollbar { display: none; }
+
+.ui-cs-slider .ui-cs-card {
+    min-width: min(420px, 85vw);
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+.ui-cs-nav {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.ui-cs-nav button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--ui-border);
+    background: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ui-cs-nav button:hover { background: var(--ui-blue); color: #fff; border-color: var(--ui-blue); }
+
+/* Hero mesh upgrade */
+.ui-hero__mesh {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 80% 60% at 10% 20%, rgba(0, 87, 255, 0.12), transparent 50%),
+        radial-gradient(ellipse 60% 50% at 90% 80%, rgba(99, 102, 241, 0.1), transparent 50%);
+    pointer-events: none;
+}
+
+.ui-hero__grid { position: relative; z-index: 1; }
+
+/* Floating cards in hero */
+.ui-hero__floats {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.ui-hero__float-card {
+    position: absolute;
+    background: #fff;
+    border: 1px solid var(--ui-border);
+    border-radius: 12px;
+    padding: 0.65rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: var(--ui-shadow);
+    animation: uiFloat 4s ease-in-out infinite;
+}
+
+.ui-hero__float-card--1 { top: 10%; right: 5%; animation-delay: 0s; }
+.ui-hero__float-card--2 { bottom: 20%; right: 15%; animation-delay: 1s; color: var(--ui-blue); }
+
+@keyframes uiFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Skeleton header while loading */
+.ui-header-skeleton {
+    height: var(--ui-header-h);
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: uiShimmer 1.2s infinite;
+}
+
+@keyframes uiShimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}

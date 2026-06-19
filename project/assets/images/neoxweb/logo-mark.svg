@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="nxMarkGrad" x1="4" y1="44" x2="44" y2="4" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22c55e"/>
+      <stop offset="0.5" stop-color="#4ade80"/>
+      <stop offset="1" stop-color="#a3e635"/>
+    </linearGradient>
+    <linearGradient id="nxMarkGlow" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4ade80" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="14" fill="#030806"/>
+  <rect width="48" height="48" rx="14" fill="url(#nxMarkGlow)"/>
+  <rect x="1.5" y="1.5" width="45" height="45" rx="12.5" stroke="url(#nxMarkGrad)" stroke-width="1.5" fill="none" opacity="0.85"/>
+  <path d="M14 32V16l8 10 8-10v16" stroke="url(#nxMarkGrad)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="36" cy="14" r="2.5" fill="#4ade80"/>
+  <circle cx="36" cy="14" r="5" stroke="#4ade80" stroke-opacity="0.35" stroke-width="1"/>
+</svg>

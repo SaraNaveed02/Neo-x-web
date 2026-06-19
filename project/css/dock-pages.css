@@ -1,0 +1,232 @@
+/**
+ * Bottom-nav pages — zero empty space, tight professional layout
+ */
+body.has-dock .ui-section,
+body.has-dock .pr-section,
+body.has-dock .cs-section {
+    padding: clamp(2rem, 4.5vw, 3.25rem) 0;
+}
+
+body.has-dock .ui-hero--inner,
+body.has-dock .ui-hero--ref {
+    padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+body.has-dock .ui-hero--ref { min-height: auto; padding-top: clamp(5rem, 10vw, 6.5rem); }
+
+/* Full-bleed hero with project image */
+.nx-hero-img {
+    position: relative;
+    padding: clamp(5.5rem, 11vw, 7rem) 0 clamp(2rem, 4vw, 2.5rem);
+    overflow: hidden;
+    background: #050508;
+}
+
+.nx-hero-img__bg {
+    position: absolute;
+    inset: 0;
+    background: url('../assets/images/neoxweb/hero-bg-new.jpg') center/cover no-repeat;
+    opacity: 0.35;
+}
+
+.nx-hero-img__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(5,5,8,0.75) 0%, rgba(5,5,8,0.92) 70%, #050508 100%);
+}
+
+.nx-hero-img__inner {
+    position: relative;
+    z-index: 2;
+    width: min(1200px, calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+.nx-hero-img h1 {
+    font-size: clamp(1.75rem, 5.5vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.12;
+    color: #fff;
+    margin: 0.75rem 0 1rem;
+    max-width: 720px;
+}
+
+.nx-hero-img p {
+    color: rgba(255,255,255,0.7);
+    line-height: 1.65;
+    max-width: 600px;
+    margin: 0 0 1.25rem;
+    font-size: 0.9375rem;
+}
+
+/* Why choose — 3 cards with icons */
+.nx-why-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) { .nx-why-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.nx-why-card {
+    padding: 1.35rem;
+    border-radius: 1rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(45,212,191,0.15);
+}
+
+.nx-why-card i {
+    font-size: 1.35rem;
+    color: #2dd4bf;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.nx-why-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin: 0 0 0.4rem; }
+.nx-why-card p { font-size: 0.8125rem; color: rgba(255,255,255,0.6); margin: 0; line-height: 1.55; }
+
+/* Team roles grid */
+.nx-team-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) { .nx-team-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.nx-team-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.04);
+}
+
+.nx-team-card__img {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.nx-team-card__img img { width: 100%; height: 100%; object-fit: cover; }
+
+.nx-team-card__body { padding: 0.85rem; }
+.nx-team-card__body h4 { font-size: 0.875rem; font-weight: 700; color: #fff; margin: 0 0 0.25rem; }
+.nx-team-card__body p { font-size: 0.6875rem; color: rgba(255,255,255,0.55); margin: 0; line-height: 1.45; }
+
+/* Cities strip */
+.nx-cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.nx-cities span {
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: rgba(45,212,191,0.1);
+    border: 1px solid rgba(45,212,191,0.2);
+    color: #2dd4bf;
+}
+
+/* Dense image+text row */
+.nx-dense-row {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) { .nx-dense-row { grid-template-columns: 1fr 1fr; } }
+
+.nx-dense-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.875rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s;
+}
+
+.nx-dense-card:hover { border-color: rgba(45,212,191,0.35); }
+
+.nx-dense-card img {
+    width: 100px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.nx-dense-card h4 { font-size: 0.875rem; font-weight: 700; color: #fff; margin: 0 0 0.25rem; }
+.nx-dense-card p { font-size: 0.75rem; color: rgba(255,255,255,0.55); margin: 0; line-height: 1.45; }
+
+/* Contact info grid */
+.nx-info-grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) { .nx-info-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.nx-info-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 0.875rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.nx-info-item i {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: rgba(45,212,191,0.12);
+    color: #2dd4bf;
+    flex-shrink: 0;
+}
+
+.nx-info-item strong { display: block; font-size: 0.8125rem; color: #fff; margin-bottom: 0.2rem; }
+.nx-info-item span, .nx-info-item a { font-size: 0.75rem; color: rgba(255,255,255,0.6); text-decoration: none; line-height: 1.5; }
+.nx-info-item a:hover { color: #2dd4bf; }
+
+/* Portfolio full-width stack on mobile dock */
+.nx-stack-cards { display: grid; gap: 1rem; }
+
+.nx-stack-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.04);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.nx-stack-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+.nx-stack-card__body { padding: 1rem 1.15rem 1.25rem; }
+.nx-stack-card__body h3 { font-size: 1rem; font-weight: 700; color: #fff; margin: 0 0 0.4rem; line-height: 1.35; }
+.nx-stack-card__body p { font-size: 0.8125rem; color: rgba(255,255,255,0.6); margin: 0 0 0.65rem; line-height: 1.5; }
+.nx-stack-card__metrics { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.65rem; }
+.nx-stack-card__metrics span { font-size: 0.6875rem; color: rgba(255,255,255,0.5); }
+.nx-stack-card__metrics strong { color: #2dd4bf; font-size: 0.9375rem; display: block; }
+.nx-stack-card__link { font-size: 0.8125rem; font-weight: 600; color: #2dd4bf; }
+
+.nx-tag {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(16,185,129,0.85);
+    color: #fff;
+    font-size: 0.625rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}

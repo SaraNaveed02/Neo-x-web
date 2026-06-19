@@ -1,0 +1,485 @@
+/**
+ * NEOXWEB — Professional / Enterprise polish layer
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --ui-blue: #0b3dcc;
+    --ui-blue-dark: #082a94;
+    --ui-navy: #071526;
+    --ui-accent: #0ea5e9;
+    --ui-font: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    --ui-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    --ui-shadow: 0 1px 3px rgba(7, 21, 38, 0.06), 0 8px 24px rgba(7, 21, 38, 0.06);
+    --ui-shadow-lg: 0 4px 6px rgba(7, 21, 38, 0.04), 0 24px 48px rgba(7, 21, 38, 0.1);
+}
+
+body.unified-site {
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Top announcement bar ── */
+.ui-topbar {
+    background: var(--ui-navy);
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.8125rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ui-topbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.ui-topbar__inner span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ui-topbar__inner i { color: var(--ui-accent); font-size: 0.75rem; }
+
+.ui-topbar__inner a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.ui-topbar__inner a:hover { opacity: 0.85; }
+
+/* ── Logo mark ── */
+.ui-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.ui-logo-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, var(--ui-blue), #1d4ed8);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 1rem;
+    font-weight: 800;
+    box-shadow: 0 4px 12px rgba(11, 61, 204, 0.35);
+    flex-shrink: 0;
+}
+
+.ui-logo-text { letter-spacing: -0.03em; }
+.ui-logo-text span { color: var(--ui-blue); }
+
+/* ── Header refinements ── */
+.ui-header {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom-color: #e8edf4;
+}
+
+.ui-nav > li > a,
+.ui-nav > li > button.ui-nav-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.ui-btn-contact {
+    background: var(--ui-navy);
+    border-radius: 8px;
+    padding: 0.6rem 1.15rem;
+    font-size: 0.8125rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.ui-btn-contact:hover {
+    background: var(--ui-blue);
+    transform: none;
+}
+
+.ui-btn-outline--header {
+    padding: 0.55rem 1rem !important;
+    font-size: 0.8125rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    border-width: 1.5px !important;
+}
+
+.ui-btn-icon {
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+}
+
+/* ── Hero professional ── */
+.ui-hero {
+    background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+    border-bottom: 1px solid var(--ui-border);
+}
+
+.ui-hero h1 {
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+}
+
+.ui-hero h1 strong {
+    background: linear-gradient(135deg, var(--ui-blue) 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ui-hero__lead {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+.ui-btn-primary {
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    letter-spacing: 0.01em;
+    padding: 0.85rem 1.6rem;
+    box-shadow: 0 4px 14px rgba(11, 61, 204, 0.28);
+}
+
+.ui-btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(11, 61, 204, 0.35);
+    transform: translateY(-1px);
+}
+
+.ui-btn-outline {
+    border-radius: 8px;
+    font-weight: 600;
+    border-width: 1.5px;
+}
+
+.ui-clutch-badge {
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    letter-spacing: 0.01em;
+}
+
+.ui-hero__float-card {
+    border-radius: 8px;
+    font-size: 0.75rem;
+    box-shadow: var(--ui-shadow);
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.ui-hero__shape {
+    background: linear-gradient(145deg, rgba(11, 61, 204, 0.08), rgba(14, 165, 233, 0.06));
+    border: 1px solid rgba(11, 61, 204, 0.12);
+}
+
+.ui-hero__shape i {
+    font-size: 3.5rem;
+    opacity: 0.9;
+}
+
+/* Trust marquee */
+.ui-trust-marquee {
+    background: var(--ui-navy);
+    border-bottom: none;
+    padding: 0.85rem 0;
+}
+
+.ui-trust-marquee__track span {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+/* Section typography */
+.ui-section-title {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+
+.ui-section-tag {
+    letter-spacing: 0.14em;
+    font-size: 0.6875rem;
+}
+
+/* Cards — cleaner enterprise look */
+.ui-stat-card,
+.ui-benefit-card,
+.ui-cs-card,
+.ui-testimonial,
+.ui-process-card,
+.ui-resource-card,
+.ui-service-col {
+    border-radius: 12px;
+    box-shadow: none;
+    border-color: #e8edf4;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.ui-benefit-card:hover,
+.ui-cs-card:hover,
+.ui-resource-card:hover {
+    border-color: rgba(11, 61, 204, 0.25);
+    box-shadow: var(--ui-shadow);
+}
+
+.ui-stat-box strong {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+/* Testimonials pro */
+.ui-testimonial {
+    position: relative;
+    padding: 2rem 1.75rem 1.75rem;
+}
+
+.ui-testimonial::before {
+    content: '\201C';
+    position: absolute;
+    top: 0.75rem;
+    left: 1.25rem;
+    font-size: 3rem;
+    line-height: 1;
+    color: rgba(11, 61, 204, 0.12);
+    font-family: Georgia, serif;
+}
+
+.ui-testimonial p {
+    font-style: normal;
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--ui-text);
+    position: relative;
+    z-index: 1;
+}
+
+.ui-testimonial strong {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9375rem;
+}
+
+.ui-testimonial span {
+    display: block;
+    font-size: 0.8125rem;
+    margin-top: 0.15rem;
+}
+
+.ui-testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ui-blue), var(--ui-accent));
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+/* CTA band */
+.ui-cta-band {
+    background: linear-gradient(135deg, #071526 0%, #0f2744 50%, #0b3dcc 100%);
+}
+
+.ui-cta-band h2 { font-weight: 800; letter-spacing: -0.02em; }
+
+/* Footer pro */
+.ui-footer {
+    background: #050d18;
+    padding-top: 4rem;
+}
+
+.ui-footer .ui-logo-mark {
+    width: 32px;
+    height: 32px;
+    font-size: 0.875rem;
+}
+
+.ui-footer-social {
+    display: flex;
+    gap: 0.65rem;
+    margin-top: 1.25rem;
+}
+
+.ui-footer-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: grid;
+    place-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: 0.2s;
+}
+
+.ui-footer-social a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.ui-footer-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.ui-footer-badges span {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.ui-footer h4 {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.ui-footer a {
+    font-size: 0.875rem;
+    padding: 0.3rem 0;
+}
+
+.ui-footer-bottom {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* Forms */
+.ui-form {
+    border-radius: 12px;
+    box-shadow: var(--ui-shadow-lg);
+    border-color: #e8edf4;
+}
+
+.ui-field input,
+.ui-field select,
+.ui-field textarea {
+    border-radius: 8px;
+    border-color: #dde4ee;
+    font-size: 0.9375rem;
+}
+
+.ui-field label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--ui-navy);
+    letter-spacing: 0.01em;
+}
+
+/* App shell — subtler */
+.app-loader__logo { font-family: var(--ui-display); }
+.app-loader__spinner { border-width: 2px; }
+
+.app-progress {
+    background: linear-gradient(90deg, var(--ui-navy), var(--ui-blue));
+    box-shadow: none;
+    height: 2px;
+}
+
+.app-mobile-dock {
+    border-top-color: #e8edf4;
+    box-shadow: 0 -4px 20px rgba(7, 21, 38, 0.06);
+}
+
+.app-mobile-dock a {
+    font-size: 0.625rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* WhatsApp widget — corporate subtle */
+.nx-wa-fab {
+    border-radius: 12px !important;
+    box-shadow: var(--ui-shadow-lg) !important;
+    font-weight: 600 !important;
+}
+
+/* Inner pages */
+body.unified-site .site-hero h1,
+body.unified-site .web-hero h1 {
+    font-weight: 800 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.12 !important;
+}
+
+body.unified-site .btn-primary,
+body.unified-site .btn-neoxweb {
+    border-radius: 8px !important;
+    text-transform: none !important;
+    letter-spacing: 0.01em !important;
+    box-shadow: 0 4px 14px rgba(11, 61, 204, 0.22) !important;
+}
+
+body.unified-site .value-card,
+body.unified-site .service-panel,
+body.unified-site .team-card {
+    border-radius: 12px !important;
+    box-shadow: none !important;
+}
+
+body.unified-site .value-card:hover,
+body.unified-site .service-panel:hover {
+    box-shadow: var(--ui-shadow) !important;
+    border-color: rgba(11, 61, 204, 0.2) !important;
+}
+
+/* Mega menu polish */
+.ui-mega {
+    border-radius: 12px;
+    border-color: #e8edf4;
+    padding: 1.75rem;
+}
+
+.ui-mega-col a {
+    font-weight: 500;
+    padding: 0.4rem 0;
+    transition: color 0.15s, padding-left 0.15s;
+}
+
+.ui-mega-col a:hover {
+    padding-left: 4px;
+}
+
+@media (max-width: 1100px) {
+    .ui-topbar__inner { justify-content: center; text-align: center; }
+    .ui-topbar__inner a { display: none; }
+}
+
+@media (max-width: 768px) {
+    .ui-btn-outline--header { display: none !important; }
+}

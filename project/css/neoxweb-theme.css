@@ -1,0 +1,1078 @@
+/**
+ * NEOXWEB — professional theme (reference design)
+ */
+
+:root {
+    --neox-green: #10b981;
+    --neox-green-bright: #22c55e;
+    --neox-green-glow: rgba(16, 185, 129, 0.45);
+    --neox-dark: #0a0a0a;
+    --neox-hero-bg-image: url('../assets/images/neoxweb/hero-bg-new.jpg');
+}
+
+.text-neox-green,
+.hero-title-accent {
+    color: var(--neox-green-bright);
+}
+
+.btn-neoxweb {
+    background: linear-gradient(135deg, var(--neox-green-bright), var(--neox-green));
+    color: #fff !important;
+    border: none;
+    box-shadow: 0 8px 32px var(--neox-green-glow);
+}
+
+.btn-neoxweb:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.btn-neoxweb-outline {
+    background: transparent;
+    color: #fff !important;
+    border: 2px solid var(--neox-green-bright);
+}
+
+.btn-neoxweb-outline:hover {
+    background: rgba(16, 185, 129, 0.12);
+}
+
+/* Hero — full background image + text overlay */
+.hero-section--neoxweb {
+    position: relative;
+    min-height: min(92vh, 900px);
+    padding: clamp(7rem, 12vw, 9rem) 0 clamp(4rem, 7vw, 5.5rem);
+    background: var(--neox-dark);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section--neoxweb .hero-neoxweb-bg {
+    position: absolute;
+    inset: -6% -4%;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.22), transparent 45%),
+        radial-gradient(circle at 80% 60%, rgba(124, 58, 237, 0.18), transparent 42%),
+        linear-gradient(135deg, #050508 0%, #0a0a12 50%, #0f172a 100%);
+    transform: none;
+    filter: none;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-section--neoxweb .hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(5, 5, 8, 0.93) 0%, rgba(8, 8, 12, 0.78) 38%, rgba(10, 10, 14, 0.4) 62%, rgba(10, 10, 14, 0.2) 100%),
+        radial-gradient(circle at 80% 40%, rgba(16, 185, 129, 0.12), transparent 50%);
+    pointer-events: none;
+}
+
+.hero-section--neoxweb .hero-particles-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: 0.72;
+}
+
+.hero-section--neoxweb .hero-grid--bg {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: 0;
+    text-align: left;
+    justify-items: start;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .hero-section--neoxweb .hero-grid--bg {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    }
+
+    .hero-visual-art {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .visual-art--hero-home {
+        width: 100%;
+        max-width: 420px;
+        filter: drop-shadow(0 24px 60px rgba(37, 99, 235, 0.25));
+        animation: webFloat 8s ease-in-out infinite;
+    }
+}
+
+.hero-visual-art {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .hero-visual-art {
+        display: flex;
+    }
+}
+
+.hero-section--neoxweb .hero-copy {
+    max-width: 640px;
+    text-align: left;
+}
+
+.hero-section--neoxweb .hero-actions {
+    justify-content: flex-start;
+}
+
+.hero-section--neoxweb .hero-statcards {
+    width: 100%;
+    max-width: 560px;
+}
+
+.hero-section--neoxweb .hero-title {
+    font-size: clamp(2.35rem, 4.8vw, 3.65rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section--neoxweb .hero-text {
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-section--neoxweb .stat-card {
+    background: rgba(5, 8, 12, 0.55);
+    backdrop-filter: blur(10px);
+    border-color: rgba(16, 185, 129, 0.15);
+}
+
+.hero-section--neoxweb .hero-grid {
+    position: relative;
+    z-index: 3;
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 4vw, 4rem);
+}
+
+.hero-section--neoxweb .eyebrow {
+    color: var(--neox-green-bright);
+    letter-spacing: 0.14em;
+}
+
+.hero-image-frame {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow:
+        0 0 60px var(--neox-green-glow),
+        0 24px 80px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.hero-image-frame::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 26px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), transparent 60%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-section--neoxweb .hero-main-image {
+    width: 100%;
+    aspect-ratio: 4 / 3.2;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero-section--neoxweb .hero-visual {
+    min-height: auto;
+}
+
+/* Team & testimonial — icons only, no human photos */
+.team-icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--neox-green-bright), #4ade80);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.testimonial-brand-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+    color: var(--neox-green-bright);
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    flex-shrink: 0;
+}
+
+/* Navbar logo box — base; navbar-pro.css extends */
+.logo-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.65rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.logo-box .logo-img {
+    height: 34px !important;
+}
+
+/* btn-quote base — navbar-pro.css provides full styling */
+
+/* WhatsApp widget */
+.nx-wa-fab {
+    position: fixed;
+    right: 1.25rem;
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    z-index: 10550;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nx-wa-fab:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 36px rgba(37, 211, 102, 0.55);
+}
+
+.nx-wa-fab__dot {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 12px;
+    height: 12px;
+    background: #ef4444;
+    border-radius: 50%;
+    border: 2px solid #25d366;
+    animation: nxWaPulse 2s ease infinite;
+}
+
+@keyframes nxWaPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.85; }
+}
+
+body.nx-app-body .nx-wa-fab {
+    bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.nx-wa-panel {
+    position: fixed;
+    right: 1.25rem;
+    bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+    z-index: 10540;
+    width: min(360px, calc(100vw - 2rem));
+    border-radius: 18px;
+    overflow: hidden;
+    background: #0b141a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px) scale(0.96);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+body.nx-app-body .nx-wa-panel {
+    bottom: calc(10rem + env(safe-area-inset-bottom, 0px));
+}
+
+.nx-wa-panel.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.nx-wa-panel__head {
+    background: #075e54;
+    padding: 1rem 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nx-wa-panel__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #10b981);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.nx-wa-panel__head strong {
+    display: block;
+    font-size: 0.95rem;
+}
+
+.nx-wa-panel__head span {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nx-wa-panel__call {
+    margin-left: auto;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+    font-size: 1.35rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nx-wa-panel__call:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.nx-wa-panel__nums {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0.55rem 0.75rem;
+    background: #0a1117;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nx-wa-num-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(37, 211, 102, 0.25);
+    background: rgba(37, 211, 102, 0.08);
+    color: #86efac;
+    font-size: 0.72rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.nx-wa-num-chip.is-active,
+.nx-wa-num-chip:hover {
+    background: rgba(37, 211, 102, 0.2);
+    border-color: rgba(37, 211, 102, 0.5);
+    color: #fff;
+}
+
+.nx-wa-panel__body {
+    padding: 1rem;
+    min-height: 200px;
+    max-height: 280px;
+    overflow-y: auto;
+    background: #0b141a url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='%230b141a'/%3E%3Cpath d='M30 0v60M0 30h60' stroke='%23111b21' stroke-width='0.5'/%3E%3C/svg%3E");
+}
+
+.nx-wa-bubble {
+    max-width: 88%;
+    padding: 0.65rem 0.85rem;
+    border-radius: 12px 12px 12px 4px;
+    background: #1f2c34;
+    color: #e9edef;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 0.65rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nx-wa-bubble--time {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin-top: 0.35rem;
+    text-align: right;
+}
+
+.nx-wa-panel__foot {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: #1f2c34;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nx-wa-panel__foot input {
+    flex: 1;
+    border: none;
+    border-radius: 999px;
+    padding: 0.65rem 1rem;
+    background: #2a3942;
+    color: #fff;
+    font-size: 0.88rem;
+}
+
+.nx-wa-panel__foot input:focus {
+    outline: 2px solid rgba(37, 211, 102, 0.4);
+}
+
+.nx-wa-panel__foot button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: #25d366;
+    color: #fff;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Contact page */
+.contact-neoxweb-hero {
+    padding: clamp(5rem, 9vw, 7rem) 0 2rem;
+    background: var(--neox-dark);
+    text-align: center;
+}
+
+.contact-neoxweb-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 1rem 0;
+}
+
+.contact-neoxweb-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-wa-card {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.contact-form-neoxweb {
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 900px) {
+    .hero-section--neoxweb {
+        min-height: min(85vh, 780px);
+    }
+
+    .hero-section--neoxweb .hero-neoxweb-bg {
+        inset: -4%;
+        transform: scale(1.15);
+    }
+
+    .hero-section--neoxweb .hero-bg-overlay {
+        background:
+            linear-gradient(180deg, rgba(5, 5, 8, 0.92) 0%, rgba(8, 8, 12, 0.8) 50%, rgba(10, 10, 14, 0.88) 100%);
+    }
+
+    .hero-section--neoxweb .hero-statcards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section--neoxweb .hero-grid--bg {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .hero-section--neoxweb .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-neoxweb-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .nx-wa-fab {
+        width: 62px;
+        height: 62px;
+        font-size: 1.95rem;
+        right: 1rem;
+    }
+}
+
+/* ── Homepage service cards ── */
+.neox-service-cards {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.neox-service-card {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(16, 185, 129, 0.15);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.neox-service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(16, 185, 129, 0.45);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.neox-service-card__media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.neox-service-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.neox-service-card:hover .neox-service-card__media img {
+    transform: scale(1.08);
+}
+
+.neox-service-card__media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(5, 8, 6, 0.85) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+.neox-service-card__badge {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(16, 185, 129, 0.92);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.neox-service-card__body {
+    padding: 1.25rem 1.35rem 1.5rem;
+}
+
+.neox-service-card__body h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.neox-service-card__body p {
+    margin: 0 0 0.85rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.neox-service-card__body a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--neox-green-bright);
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .neox-service-cards { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+
+@media (min-width: 1100px) {
+    .neox-service-cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Why / team / CTA blocks */
+.nx-why-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .nx-why-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.nx-why-card {
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nx-why-card i {
+    font-size: 1.5rem;
+    color: var(--neox-green-bright);
+    margin-bottom: 0.75rem;
+}
+
+.nx-why-card h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+}
+
+.nx-why-card p {
+    font-size: 0.9rem;
+    color: var(--muted, #a3a3a3);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.nx-team-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .nx-team-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.nx-team-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nx-team-card__img {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.nx-team-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nx-team-card__body {
+    padding: 0.85rem;
+}
+
+.nx-team-card__body h4 {
+    font-size: 0.9rem;
+    margin: 0 0 0.25rem;
+}
+
+.nx-team-card__body p {
+    font-size: 0.75rem;
+    color: var(--muted, #a3a3a3);
+    margin: 0;
+}
+
+.neox-cta-band {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(74, 222, 128, 0.1));
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+}
+
+.neox-cta-band h2 {
+    font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    margin-bottom: 0.75rem;
+}
+
+.neox-cta-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.neox-cta-stats div {
+    text-align: center;
+}
+
+.neox-cta-stats strong {
+    display: block;
+    font-size: 1.75rem;
+    color: var(--neox-green-bright);
+}
+
+.neox-cta-stats span {
+    font-size: 0.85rem;
+    color: var(--muted, #a3a3a3);
+}
+
+.neox-cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.neox-cities span {
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.svc-banner-hero__bg--gradient {
+    background:
+        radial-gradient(circle at 25% 35%, rgba(37, 99, 235, 0.28), transparent 50%),
+        radial-gradient(circle at 75% 65%, rgba(16, 185, 129, 0.2), transparent 45%),
+        linear-gradient(135deg, #050508 0%, #0a0a12 50%, #0f172a 100%) !important;
+    opacity: 1 !important;
+}
+
+.nx-team-card__img--icon .media-icon-placeholder,
+.nx-team-icon {
+    aspect-ratio: 4 / 3;
+    font-size: 2rem;
+    border-radius: 0;
+}
+
+.pr-media-icon,
+.pr-mini-icon,
+.nx-stack-icon {
+    aspect-ratio: 1;
+    min-height: 80px;
+    font-size: 1.75rem;
+}
+
+.ui-resource-thumb {
+    aspect-ratio: 16 / 10;
+    min-height: 120px;
+    font-size: 2rem;
+}
+
+.svc-vertical-item__icon .media-icon-placeholder {
+    aspect-ratio: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 64px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+}
+
+/* ── Full-page WhatsApp contact (contact.html) ── */
+body.contact-chat-page.contact-page {
+    background: #0a0a0a;
+    min-height: 100dvh;
+}
+
+body.contact-chat-page:not(.contact-page) .contact-chat-main {
+    padding: clamp(5.5rem, 10vw, 7rem) 0 2rem;
+    min-height: calc(100dvh - 4rem);
+    display: flex;
+    align-items: center;
+}
+
+.contact-chat-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.contact-wa-card--fullpage {
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(37, 211, 102, 0.25);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55), 0 0 40px rgba(37, 211, 102, 0.08);
+    display: flex;
+    flex-direction: column;
+    min-height: min(72dvh, 640px);
+}
+
+.contact-wa-card--fullpage .nx-wa-panel__head {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.contact-chat-call {
+    margin-left: auto;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+    font-size: 1.35rem;
+}
+
+.contact-chat-messages {
+    flex: 1;
+    min-height: 280px;
+    max-height: none;
+    overflow-y: auto;
+}
+
+.nx-wa-bubble--user {
+    margin-left: auto;
+    max-width: 85%;
+    border-radius: 12px 12px 4px 12px;
+    background: #005c4b;
+}
+
+.contact-chat-quick {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.65rem 0.85rem;
+    background: #111b21;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-quick-btn {
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(37, 211, 102, 0.35);
+    background: rgba(37, 211, 102, 0.1);
+    color: #86efac;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.contact-quick-btn:hover {
+    background: rgba(37, 211, 102, 0.22);
+}
+
+.contact-wa-card--fullpage .nx-wa-panel__foot {
+    flex-shrink: 0;
+}
+
+.contact-chat-note {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.82rem;
+    margin-top: 1.25rem;
+}
+
+body.contact-chat-page .nx-wa-fab {
+    display: none !important;
+}
+
+body.nx-app-body.contact-chat-page {
+    padding-bottom: calc(var(--nx-nav-h) + var(--nx-safe-bottom) + 0.75rem) !important;
+}
+
+/* Text logo + icon placeholders (no photos) */
+.brand-text-logo {
+    font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+    font-weight: 800;
+    font-size: 1.35rem;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    text-decoration: none;
+    background: linear-gradient(135deg, #ffffff 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.brand-text-logo span {
+    background: linear-gradient(135deg, #60a5fa, #10b981);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.brand-text-logo--auth { font-size: 2rem; }
+.brand-text-logo--sm { font-size: 1rem; }
+
+/* Abstract SVG visuals (no human photos) */
+.visual-art-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 100%;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.14), transparent 45%),
+        radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.12), transparent 42%),
+        linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(10, 10, 14, 0.98));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.visual-art {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.visual-art-wrap--card {
+    aspect-ratio: 16 / 10;
+    border-radius: calc(var(--radius) - 4px);
+    margin-bottom: 0.25rem;
+    padding: 1rem;
+}
+
+.visual-art-wrap--card .visual-art {
+    max-height: 100%;
+    filter: drop-shadow(0 12px 32px rgba(37, 99, 235, 0.18));
+}
+
+.visual-art-wrap--project {
+    aspect-ratio: 4 / 3;
+    min-height: 220px;
+    border-radius: 0;
+    padding: 1.25rem;
+}
+
+.visual-art-wrap--media,
+.visual-art-wrap--blog {
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+    max-height: min(260px, 38vw);
+    border-radius: calc(var(--radius) - 4px);
+    padding: 0;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.visual-art-wrap--media .visual-art,
+.visual-art-wrap--blog .visual-art {
+    object-fit: cover;
+    padding: 0;
+}
+
+.visual-art-wrap--blog {
+    min-height: 0;
+}
+
+.web-hero-visual-icon .visual-art--hero {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: unset;
+    object-fit: cover;
+    object-position: center center;
+    filter: drop-shadow(0 30px 80px rgba(74, 222, 128, 0.22));
+    animation: webFloat 7s ease-in-out infinite;
+}
+
+/* Legacy icon-only placeholders (fallback) */
+.media-icon-placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.16), rgba(124, 58, 237, 0.12));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #60a5fa;
+    font-size: 2.5rem;
+}
+
+.project-card .media-icon-placeholder {
+    aspect-ratio: 4 / 3;
+    min-height: 220px;
+    border-radius: 0;
+}
+
+.portfolio-media .media-icon-placeholder {
+    aspect-ratio: 16 / 10;
+    min-height: 200px;
+}
+
+.blog-thumb .media-icon-placeholder {
+    aspect-ratio: 16 / 10;
+    min-height: 180px;
+    border-radius: calc(var(--radius) - 4px);
+}
+
+.svc-banner-hero__bg--gradient {
+    background:
+        radial-gradient(circle at 25% 35%, rgba(37, 99, 235, 0.28), transparent 50%),
+        radial-gradient(circle at 75% 65%, rgba(16, 185, 129, 0.2), transparent 45%),
+        linear-gradient(135deg, #050508 0%, #0a0a12 50%, #0f172a 100%) !important;
+    opacity: 1 !important;
+}
+
+.nx-team-card__img--icon .media-icon-placeholder,
+.nx-team-icon {
+    aspect-ratio: 4 / 3;
+    font-size: 2rem;
+    border-radius: 0;
+}
+
+.pr-media-icon,
+.pr-mini-icon,
+.nx-stack-icon {
+    aspect-ratio: 1;
+    min-height: 80px;
+    font-size: 1.75rem;
+}
+
+.ui-resource-thumb {
+    aspect-ratio: 16 / 10;
+    min-height: 120px;
+    font-size: 2rem;
+}
+
+.svc-vertical-item__icon .media-icon-placeholder {
+    aspect-ratio: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 64px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+}
+
+.neox-service-card__media .media-icon-placeholder {
+    aspect-ratio: 16 / 10;
+    min-height: 100%;
+    font-size: 3rem;
+}
+
+.project-card .media-icon-placeholder {
+    border-radius: 0;
+}
+
+.footer-logo span {
+    color: var(--neox-green-bright);
+}

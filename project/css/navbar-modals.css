@@ -1,0 +1,127 @@
+/**
+ * NEOXWEB — Login modal only
+ */
+
+.nav-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10050;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nx-nav-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.92);
+    width: min(92vw, 440px);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    border-radius: 28px;
+    padding: 36px 32px 32px;
+    z-index: 10051;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.55);
+}
+
+.nx-nav-modal.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.nx-nav-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.nx-nav-modal h2 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+    background: linear-gradient(135deg, #fff, #4ade80);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nx-nav-modal__sub {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.nx-nav-modal .input-group {
+    margin-bottom: 1rem;
+}
+
+.nx-nav-modal .input-group input {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #334155;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.nx-nav-modal .input-group input:focus {
+    outline: none;
+    border-color: #60a5fa;
+}
+
+.nx-nav-modal .login-btn-modal {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #2563eb, #10b981);
+    border: none;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.nx-nav-modal .nx-modal-foot {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.nx-nav-modal .nx-modal-foot a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+body.nav-modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .nav-modal-backdrop,
+    .nx-nav-modal {
+        display: none !important;
+    }
+}

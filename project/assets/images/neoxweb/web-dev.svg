@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Web development">
+  <defs>
+    <linearGradient id="wd" x1="0" y1="400" x2="640" y2="0"><stop stop-color="#065f46"/><stop offset="1" stop-color="#22c55e"/></linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="#030806"/>
+  <circle cx="520" cy="80" r="120" fill="#22c55e" opacity="0.12"/>
+  <rect x="60" y="70" width="520" height="280" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(74,222,128,0.25)"/>
+  <rect x="90" y="100" width="180" height="14" rx="7" fill="url(#wd)"/>
+  <rect x="90" y="130" width="120" height="10" rx="5" fill="rgba(255,255,255,0.15)"/>
+  <rect x="90" y="170" width="460" height="140" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="110" y="190" width="80" height="60" rx="8" fill="#22c55e" opacity="0.35"/>
+  <rect x="210" y="200" width="200" height="12" rx="6" fill="rgba(255,255,255,0.2)"/>
+  <rect x="210" y="225" width="160" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <text x="320" y="360" text-anchor="middle" fill="#4ade80" font-family="Inter,sans-serif" font-size="22" font-weight="700">Web Development</text>
+</svg>

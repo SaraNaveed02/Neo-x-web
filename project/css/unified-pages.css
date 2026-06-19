@@ -1,0 +1,269 @@
+/**
+ * Inner pages — Unified Infotech light theme overrides
+ */
+
+body.unified-site {
+    background: var(--ui-bg);
+    color: var(--ui-text);
+}
+
+body.unified-site .page-loader,
+body.unified-site .custom-cursor,
+body.unified-site .cookie-banner { display: none !important; }
+
+/* Page heroes */
+body.unified-site .site-hero,
+body.unified-site .web-hero,
+body.unified-site .site-hero--image,
+body.unified-site .web-hero--banner {
+    background: linear-gradient(135deg, #eef2ff 0%, #fff 50%, #f8fafc 100%) !important;
+    color: var(--ui-navy) !important;
+    min-height: auto;
+    padding: clamp(5rem, 10vw, 7rem) 0 clamp(2.5rem, 5vw, 4rem) !important;
+    border-bottom: 1px solid var(--ui-border);
+}
+
+body.unified-site .site-hero-inner,
+body.unified-site .web-hero-copy,
+body.unified-site .container {
+    max-width: var(--ui-container);
+}
+
+body.unified-site .site-hero h1,
+body.unified-site .web-hero h1,
+body.unified-site main h1 {
+    font-family: var(--ui-display);
+    color: var(--ui-navy) !important;
+    letter-spacing: -0.02em;
+}
+
+body.unified-site .site-hero-lead,
+body.unified-site .web-hero-lead,
+body.unified-site .section-desc {
+    color: var(--ui-muted) !important;
+}
+
+body.unified-site .section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ui-blue) !important;
+    background: rgba(0, 87, 255, 0.08) !important;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    border: none !important;
+}
+
+body.unified-site .section-padding {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+body.unified-site .dark-bg {
+    background: var(--ui-bg-soft) !important;
+    color: var(--ui-text) !important;
+}
+
+body.unified-site .dark-bg h2,
+body.unified-site .dark-bg h3 {
+    color: var(--ui-navy) !important;
+}
+
+/* Buttons */
+body.unified-site .btn-primary,
+body.unified-site .btn-neoxweb {
+    background: var(--ui-blue) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 999px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 16px rgba(0, 87, 255, 0.25) !important;
+}
+
+body.unified-site .btn-outline,
+body.unified-site .btn-neoxweb-outline {
+    background: transparent !important;
+    color: var(--ui-navy) !important;
+    border: 2px solid var(--ui-border) !important;
+    border-radius: 999px !important;
+}
+
+body.unified-site .btn-outline:hover {
+    border-color: var(--ui-blue) !important;
+    color: var(--ui-blue) !important;
+}
+
+body.unified-site .btn-white {
+    background: #fff !important;
+    color: var(--ui-blue) !important;
+    border-radius: 999px !important;
+}
+
+/* Cards & panels */
+body.unified-site .value-card,
+body.unified-site .glass-panel,
+body.unified-site .service-panel,
+body.unified-site .team-card,
+body.unified-site .project-card,
+body.unified-site .service-card {
+    background: #fff !important;
+    border: 1px solid var(--ui-border) !important;
+    border-radius: var(--ui-radius-lg) !important;
+    box-shadow: var(--ui-shadow) !important;
+    color: var(--ui-text) !important;
+}
+
+body.unified-site .value-card i,
+body.unified-site .team-icon-box {
+    color: var(--ui-blue) !important;
+    background: rgba(0, 87, 255, 0.1) !important;
+}
+
+body.unified-site .highlight,
+body.unified-site .text-neox-green,
+body.unified-site .hero-title-accent {
+    color: var(--ui-blue) !important;
+    background: none !important;
+    -webkit-text-fill-color: var(--ui-blue) !important;
+}
+
+/* Stats */
+body.unified-site .stat-item h3,
+body.unified-site .stat-card strong {
+    color: var(--ui-blue) !important;
+}
+
+body.unified-site .stat-grid,
+body.unified-site .stat-grid .stat-item {
+    background: transparent !important;
+}
+
+/* Timeline */
+body.unified-site .timeline-item {
+    border-left-color: var(--ui-blue) !important;
+    background: #fff;
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+body.unified-site .timeline-year {
+    color: var(--ui-blue) !important;
+}
+
+/* CTA band */
+body.unified-site .site-cta-band {
+    background: linear-gradient(135deg, var(--ui-navy), #1e3a5f) !important;
+    padding: clamp(3rem, 6vw, 4rem) 0;
+}
+
+body.unified-site .site-cta-card {
+    background: transparent !important;
+    border: none !important;
+    text-align: center;
+    color: #fff !important;
+}
+
+body.unified-site .site-cta-card h2,
+body.unified-site .site-cta-card p {
+    color: #fff !important;
+}
+
+/* Service page specifics */
+body.unified-site.service-page .web-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+body.unified-site .web-hero-visual-icon {
+    background: rgba(0, 87, 255, 0.08) !important;
+    border-radius: var(--ui-radius-lg);
+}
+
+body.unified-site .web-hero-float-card {
+    background: #fff !important;
+    border: 1px solid var(--ui-border) !important;
+    color: var(--ui-text) !important;
+}
+
+body.unified-site .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+body.unified-site .checklist li::before {
+    color: var(--ui-blue) !important;
+}
+
+/* Contact page */
+body.unified-site.contact-page .contact-page-bg,
+body.unified-site.contact-page .contact-page-overlay {
+    display: none !important;
+}
+
+body.unified-site.contact-page .contact-page-hero {
+    background: linear-gradient(135deg, #eef2ff, #fff) !important;
+    padding-top: 5rem;
+}
+
+body.unified-site .contact-wa-card,
+body.unified-site .contact-form-card {
+    background: #fff !important;
+    border: 1px solid var(--ui-border) !important;
+    border-radius: var(--ui-radius-lg) !important;
+    box-shadow: var(--ui-shadow) !important;
+}
+
+body.unified-site .contact-wa-card input,
+body.unified-site .contact-form-card input,
+body.unified-site .contact-form-card textarea {
+    border: 1px solid var(--ui-border) !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+    color: var(--ui-text) !important;
+}
+
+/* Blog / portfolio grids */
+body.unified-site .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+body.unified-site .project-copy span {
+    color: var(--ui-blue) !important;
+}
+
+/* Testimonials on inner pages */
+body.unified-site .testimonial-section {
+    background: var(--ui-bg-soft) !important;
+}
+
+body.unified-site .slide {
+    background: #fff !important;
+    border: 1px solid var(--ui-border) !important;
+    color: var(--ui-text) !important;
+}
+
+/* Hide old footer when slot used */
+body.unified-site .site-footer { display: none !important; }
+
+/* Page hero utility */
+.ui-page-hero {
+    padding: clamp(5rem, 10vw, 7rem) 0 clamp(2rem, 4vw, 3rem);
+    background: linear-gradient(135deg, #eef2ff, #fff);
+    border-bottom: 1px solid var(--ui-border);
+}
+
+.ui-page-hero .ui-container { max-width: var(--ui-container); margin-inline: auto; width: 92vw; }
+
+@media (max-width: 768px) {
+    body.unified-site.service-page .web-hero-grid {
+        grid-template-columns: 1fr;
+    }
+}

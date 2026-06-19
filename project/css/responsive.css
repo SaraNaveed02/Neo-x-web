@@ -1,0 +1,82 @@
+/*
+    FILE: responsive.css
+    PURPOSE: Responsive behavior and mobile-first optimizations
+*/
+
+@media (max-width: 1080px) {
+    .service-cards-grid,
+    .project-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-grid,
+    .blog-layout,
+    .grid-two,
+    .team-grid,
+    .contact-layout { grid-template-columns: 1fr; }
+
+    .trusted-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 820px) {
+    .header-inner { flex-wrap: wrap; justify-content: space-between; }
+    .site-header { padding: 0.75rem 0; }
+    .header-actions { width: 100%; justify-content: flex-end; }
+    .btn-large { width: 100%; }
+    .trusted-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .timeline { gap: 1rem; }
+}
+
+@media (max-width: 680px) {
+    .site-nav .nav-list { display: none; }
+    .hamburger { display: flex; }
+    .mobile-menu { padding-top: 5.5rem; }
+    .hero-title { font-size: clamp(2.4rem, 8vw, 3.4rem); }
+    .hero-actions { flex-direction: column; }
+    .section-padding { padding: 3.5rem 0; }
+    .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .trusted-grid { grid-template-columns: 1fr; }
+
+    /* Touch-friendly buttons */
+    .btn, button, a.btn {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+
+    input, textarea, select {
+        font-size: 16px; /* prevents iOS zoom on focus */
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-section--cinematic {
+        min-height: auto;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-bg-layer {
+        inset: -5%;
+        transform: scale(1.18);
+    }
+
+    .hero-section--cinematic .hero-statcards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .brand-logo { font-size: 1.5rem; }
+    .btn { width: 100%; padding: 1rem 1.25rem; }
+    .hero-text {
+        font-size: 1rem;
+    }
+    .page-hero { padding: 5rem 0 3rem; }
+    .section-tag { padding: 0.5rem 0.9rem; }
+    .blog-card,
+    .portfolio-card,
+    .service-card,
+    .project-card { border-radius: 24px; }
+    .cookie-banner { left: 1rem; right: 1rem; }
+}

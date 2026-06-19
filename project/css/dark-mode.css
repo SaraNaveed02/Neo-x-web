@@ -1,0 +1,52 @@
+/*
+    FILE: dark-mode.css
+    PURPOSE: Dark mode specific styles and theme toggle support
+*/
+
+body.light-mode {
+    --bg: #f8fafc;
+    --surface: rgba(255,255,255,0.9);
+    --surface-strong: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --border: rgba(15,23,42,0.12);
+    --accent: #4ade80;
+    --accent-2: #10b981;
+    --accent-soft: rgba(74,222,128,0.16);
+    --shadow: 0 24px 80px rgba(15,23,42,0.08);
+}
+
+body.light-mode .site-header,
+body.light-mode .glass-panel,
+body.light-mode .site-footer,
+body.light-mode .mobile-menu,
+body.light-mode .cookie-banner {
+    background: rgba(255,255,255,0.9);
+    color: #0f172a;
+}
+
+body.light-mode .btn-outline { color: #0f172a; border-color: rgba(15,23,42,0.12); }
+
+body.light-mode .nav-link,
+body.light-mode .nav-link:hover { color: #0f172a; }
+
+body.light-mode .footer-links a { color: #475569; }
+
+body.light-mode .hero-title,
+body.light-mode .hero-text,
+body.light-mode .section-desc,
+body.light-mode .stat-card,
+body.light-mode .service-card,
+body.light-mode .project-card,
+body.light-mode .slide,
+body.light-mode .timeline-item,
+body.light-mode .team-card,
+body.light-mode .blog-card,
+body.light-mode .contact-card,
+body.light-mode .auth-card,
+body.light-mode .auth-panel,
+body.light-mode .profile-summary,
+body.light-mode .security-note { background: rgba(255,255,255,0.75); }
+
+body.light-mode .hero-section,
+body.light-mode .page-hero { background: radial-gradient(circle at top, rgba(74,222,128,0.08), transparent 30%), linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%); }

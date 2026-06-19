@@ -1,0 +1,607 @@
+/**
+ * FINAL — har page: text LEFT, image RIGHT (100% site-wide)
+ * nx-img-strip = 4 images LEFT → RIGHT in one row
+ */
+
+/* 4-image row — do not force single text+image row layout */
+.neoxweb-site .nx-img-strip,
+.neoxweb-site .nx-img-strip__card,
+.neoxweb-site .nx-img-strip__media,
+.neoxweb-site .nx-img-strip__body {
+    border-bottom: none !important;
+}
+
+.neoxweb-site .nx-img-strip-wrap .nx-img-strip {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+/* Kill 4-column card grid — always use rows */
+.neoxweb-site .neox-service-cards--grid,
+.neoxweb-site .neox-service-cards:not(.nx-service-rows) {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    grid-template-columns: none !important;
+    max-width: min(920px, 100%) !important;
+}
+
+/* Universal row: copy left (col 1), media right (col 2) */
+.neoxweb-site .nx-portfolio-row,
+.neoxweb-site .nx-pro-split,
+.neoxweb-site .nx-auto-row,
+.neoxweb-site .nx-service-row,
+.neoxweb-site .contact-hero-row,
+.neoxweb-site .nx-page-hero-row,
+.neoxweb-site .nx-team-card,
+.neoxweb-site .neox-service-cards > .neox-service-card {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 240px) !important;
+    gap: clamp(0.85rem, 2vw, 1.35rem) !important;
+    align-items: center !important;
+    padding: clamp(0.75rem, 1.8vw, 1.15rem) 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+    text-align: left !important;
+}
+
+.neoxweb-site .nx-portfolio-row:last-child,
+.neoxweb-site .nx-auto-row:last-child,
+.neoxweb-site .neox-service-cards > .neox-service-card:last-child {
+    border-bottom: none !important;
+}
+
+/* LEFT column — text */
+.neoxweb-site .nx-portfolio-row__copy,
+.neoxweb-site .nx-pro-split__body,
+.neoxweb-site .neox-service-card__body,
+.neoxweb-site .svc-showcase-card figcaption,
+.neoxweb-site .nx-team-card__body,
+.neoxweb-site .contact-hero-inner {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    text-align: left !important;
+    order: unset !important;
+    padding: 0 !important;
+    max-width: none !important;
+}
+
+/* RIGHT column — image */
+.neoxweb-site .nx-portfolio-row__media,
+.neoxweb-site .nx-pro-split__media,
+.neoxweb-site .neox-service-card__media,
+.neoxweb-site .svc-showcase-card__img,
+.neoxweb-site .nx-team-card__img,
+.neoxweb-site .contact-hero-row__media {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    order: unset !important;
+    max-width: 240px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    padding: 0.35rem !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background: #0a0a0a !important;
+    border: 1px solid rgba(74, 222, 128, 0.15) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+}
+
+.neoxweb-site .neox-service-card__badge {
+    position: static !important;
+    display: inline-flex !important;
+    margin-bottom: 0.5rem !important;
+    width: fit-content !important;
+}
+
+.neoxweb-site .neox-service-card__media::after {
+    display: none !important;
+}
+
+/* Full visible images — right side */
+.neoxweb-site .nx-portfolio-row__media img,
+.neoxweb-site .nx-pro-split__media img,
+.neoxweb-site .neox-service-card__media img,
+.neoxweb-site .neox-service-card__media .visual-art,
+.neoxweb-site .svc-showcase-card__img img,
+.neoxweb-site .nx-team-card__img img,
+.neoxweb-site .contact-hero-row__media img,
+.neoxweb-site .nx-auto-row img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 180px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 8px !important;
+}
+
+.neoxweb-site .neox-service-card {
+    flex-direction: unset !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+    box-shadow: none !important;
+    transform: none !important;
+    overflow: visible !important;
+}
+
+.neoxweb-site .neox-service-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.neoxweb-site .neox-service-card__body h3,
+.neoxweb-site .nx-portfolio-row__copy h3 {
+    font-size: 1rem !important;
+    margin: 0 0 0.35rem !important;
+    text-align: left !important;
+}
+
+.neoxweb-site .neox-service-card__body p,
+.neoxweb-site .nx-portfolio-row__copy p {
+    font-size: 0.875rem !important;
+    text-align: left !important;
+    margin: 0 0 0.5rem !important;
+}
+
+.neoxweb-site .neox-service-card__body a,
+.neoxweb-site .nx-portfolio-row__link {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    color: #4ade80 !important;
+}
+
+/* Showcase rows */
+.neoxweb-site .svc-showcase-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+}
+
+.neoxweb-site .svc-showcase-card {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 240px) !important;
+}
+
+/* Section titles — left */
+.neoxweb-site main .section-header,
+.neoxweb-site #services-section .section-header--cards {
+    text-align: left !important;
+    margin-inline: 0 !important;
+    max-width: none !important;
+}
+
+.neoxweb-site main .section-header h1,
+.neoxweb-site main .section-header h2,
+.neoxweb-site main .section-header .section-desc {
+    text-align: left !important;
+    margin-inline: 0 !important;
+}
+
+/* Stack containers */
+.neoxweb-site .nx-service-rows,
+.neoxweb-site .nx-portfolio-showcase,
+.neoxweb-site .nx-team-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    max-width: min(920px, 100%) !important;
+}
+
+.neoxweb-site main .container {
+    max-width: min(960px, 100%) !important;
+}
+
+@media (max-width: 640px) {
+    .neoxweb-site .nx-portfolio-row,
+    .neoxweb-site .nx-pro-split,
+    .neoxweb-site .neox-service-card,
+    .neoxweb-site .svc-showcase-card,
+    .neoxweb-site .nx-team-card,
+    .neoxweb-site .contact-hero-row,
+    .neoxweb-site .web-hero-grid,
+    .neoxweb-site .service-panel,
+    .neoxweb-site .web-case-card {
+        grid-template-columns: 1fr minmax(100px, 140px) !important;
+    }
+
+    .neoxweb-site .nx-portfolio-row__media,
+    .neoxweb-site .nx-portfolio-row__media--full,
+    .neoxweb-site .nx-pro-split__media,
+    .neoxweb-site .neox-service-card__media,
+    .neoxweb-site .svc-showcase-card__img,
+    .neoxweb-site .nx-team-card__img,
+    .neoxweb-site .contact-hero-row__media,
+    .neoxweb-site .web-hero-visual,
+    .neoxweb-site .service-panel-icon {
+        order: unset !important;
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        max-width: 140px !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
+    .neoxweb-site .nx-portfolio-row__copy,
+    .neoxweb-site .nx-pro-split__body,
+    .neoxweb-site .neox-service-card__body,
+    .neoxweb-site .svc-showcase-card figcaption,
+    .neoxweb-site .nx-team-card__body,
+    .neoxweb-site .contact-hero-inner,
+    .neoxweb-site .web-hero-copy {
+        grid-column: 1 !important;
+        order: unset !important;
+    }
+
+    .neoxweb-site .nx-portfolio-row__media img,
+    .neoxweb-site .neox-service-card__media img,
+    .neoxweb-site .svc-showcase-card__img img {
+        max-height: 120px !important;
+    }
+}
+
+/* Banner hero — text left, image right */
+.neoxweb-site .svc-banner-hero__inner {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 240px) !important;
+    gap: clamp(0.85rem, 2vw, 1.35rem) !important;
+    align-items: center !important;
+    text-align: left !important;
+}
+
+.neoxweb-site .svc-banner-hero__inner > nav,
+.neoxweb-site .svc-banner-hero__inner > .ui-section-tag,
+.neoxweb-site .svc-banner-hero__inner > h1,
+.neoxweb-site .svc-banner-hero__inner > .svc-banner-hero__lead,
+.neoxweb-site .svc-banner-hero__inner > .svc-banner-hero__actions {
+    grid-column: 1 !important;
+}
+
+.neoxweb-site .svc-banner-hero__inner > .nx-portfolio-row__media {
+    grid-column: 2 !important;
+    grid-row: 1 / span 6 !important;
+}
+.neoxweb-site .web-hero-visual,
+.neoxweb-site .web-hero-float-card {
+    display: block !important;
+}
+
+.neoxweb-site .web-hero-float-card {
+    display: none !important;
+}
+
+.neoxweb-site .web-hero-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 240px) !important;
+    gap: clamp(0.85rem, 2vw, 1.35rem) !important;
+    align-items: center !important;
+    max-width: min(920px, 100%) !important;
+    text-align: left !important;
+}
+
+.neoxweb-site .web-hero-copy {
+    grid-column: 1 !important;
+    text-align: left !important;
+}
+
+.neoxweb-site .web-hero-visual {
+    grid-column: 2 !important;
+    max-width: 240px !important;
+    margin-left: auto !important;
+}
+
+.neoxweb-site .web-hero-visual-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.35rem !important;
+    border-radius: 12px !important;
+    background: #0a0a0a !important;
+    border: 1px solid rgba(74, 222, 128, 0.15) !important;
+}
+
+.neoxweb-site .web-hero-visual-icon img,
+.neoxweb-site .web-hero-visual .visual-art--hero {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 180px !important;
+    object-fit: contain !important;
+}
+
+/* Service panels — text left, visual right */
+.neoxweb-site .service-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+}
+
+.neoxweb-site .service-panel,
+.neoxweb-site .web-case-card,
+.neoxweb-site .web-process-step {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 240px) !important;
+    gap: clamp(0.85rem, 2vw, 1.35rem) !important;
+    align-items: center !important;
+    padding: clamp(0.75rem, 1.8vw, 1.15rem) 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+    text-align: left !important;
+}
+
+.neoxweb-site .service-panel h3,
+.neoxweb-site .service-panel p,
+.neoxweb-site .service-panel .list-bullet,
+.neoxweb-site .web-case-card h3,
+.neoxweb-site .web-case-card p {
+    grid-column: 1 !important;
+    text-align: left !important;
+}
+
+.neoxweb-site .service-panel-icon,
+.neoxweb-site .web-case-badge {
+    grid-column: 2 !important;
+    grid-row: 1 / span 6 !important;
+    justify-self: end !important;
+    max-width: 240px !important;
+    width: 100% !important;
+    padding: 0.35rem !important;
+    border-radius: 12px !important;
+    background: #0a0a0a !important;
+    border: 1px solid rgba(74, 222, 128, 0.15) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.neoxweb-site .service-panel-icon img {
+    max-width: 100% !important;
+    max-height: 180px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.neoxweb-site .service-panel-num {
+    display: none !important;
+}
+
+/* Section headers — always left */
+.neoxweb-site main .section-header.text-center {
+    text-align: left !important;
+}
+
+.neoxweb-site main .section-header.text-center h2,
+.neoxweb-site main .section-header.text-center .section-desc {
+    text-align: left !important;
+    margin-inline: 0 !important;
+}
+
+/* ── GLOBAL: text LEFT, image RIGHT — all breakpoints ── */
+@media (max-width: 900px) {
+    .neoxweb-site .nx-portfolio-row,
+    .neoxweb-site .nx-pro-split,
+    .neoxweb-site .neox-service-card,
+    .neoxweb-site .svc-showcase-card,
+    .neoxweb-site .nx-team-card,
+    .neoxweb-site .contact-hero-row,
+    .neoxweb-site .nx-page-hero-row,
+    .neoxweb-site .web-hero-grid,
+    .neoxweb-site .service-panel,
+    .neoxweb-site .pr-split {
+        grid-template-columns: minmax(0, 1fr) minmax(100px, 180px) !important;
+        gap: clamp(0.75rem, 2vw, 1.25rem) !important;
+    }
+
+    .neoxweb-site .nx-portfolio-row__media,
+    .neoxweb-site .nx-portfolio-row__media--full,
+    .neoxweb-site .nx-pro-split__media,
+    .neoxweb-site .nx-pro-split__media--full,
+    .neoxweb-site .neox-service-card__media,
+    .neoxweb-site .svc-showcase-card__img,
+    .neoxweb-site .nx-team-card__img,
+    .neoxweb-site .contact-hero-row__media,
+    .neoxweb-site .web-hero-visual,
+    .neoxweb-site .pr-split__media,
+    .neoxweb-site .service-panel-icon {
+        order: unset !important;
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        max-width: 180px !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+
+    .neoxweb-site .nx-portfolio-row__copy,
+    .neoxweb-site .nx-pro-split__body,
+    .neoxweb-site .neox-service-card__body,
+    .neoxweb-site .svc-showcase-card figcaption,
+    .neoxweb-site .nx-team-card__body,
+    .neoxweb-site .contact-hero-inner,
+    .neoxweb-site .web-hero-copy,
+    .neoxweb-site .pr-split__body {
+        order: unset !important;
+        grid-column: 1 !important;
+        max-width: none !important;
+    }
+}
+
+/* Inner pages without premium hero — hide old bg */
+.neoxweb-site:not(.home-page) .nx-page-hero:not(.hero-section--premium) .hero-tech-bg,
+.neoxweb-site:not(.home-page) .cs-index-hero:not(.hero-section--premium) .hero-tech-bg,
+.neoxweb-site:not(.home-page) .hero-neoxweb-bg,
+.neoxweb-site:not(.home-page) .hero-globe-orbit,
+.neoxweb-site .nx-page-hero__particles,
+.neoxweb-site:not(.home-page) .nx-page-hero:not(.hero-section--premium) .hero-particles-canvas {
+    display: none !important;
+}
+
+.neoxweb-site .nx-page-hero:not(.hero-section--premium),
+.neoxweb-site .cs-index-hero:not(.hero-section--premium),
+.neoxweb-site.contact-page .contact-page-hero:not(.hero-section--premium) {
+    background: linear-gradient(165deg, #0a100c 0%, #050806 100%) !important;
+    min-height: auto !important;
+    padding: clamp(2rem, 5vw, 3.5rem) 0 !important;
+}
+
+.neoxweb-site.home-page .hero-section--premium-home,
+.neoxweb-site .hero-section--premium,
+.neoxweb-site .web-hero.hero-section--premium {
+    background: #050806 !important;
+    min-height: min(88vh, 820px) !important;
+    padding: 0 !important;
+}
+
+.neoxweb-site .hero-section--premium .hero-tech-bg,
+.neoxweb-site .hero-section--premium .hero-bg-overlay,
+.neoxweb-site .hero-section--premium .hero-particles-canvas,
+.neoxweb-site .web-hero.hero-section--premium .hero-tech-bg,
+.neoxweb-site .web-hero.hero-section--premium .hero-bg-overlay,
+.neoxweb-site .web-hero.hero-section--premium .hero-particles-canvas,
+.neoxweb-site.home-page .hero-section--premium-home .hero-tech-bg,
+.neoxweb-site.home-page .hero-section--premium-home .hero-bg-overlay,
+.neoxweb-site.home-page .hero-section--premium-home .hero-particles-canvas {
+    display: block !important;
+}
+
+.neoxweb-site .nx-page-hero__inner,
+.neoxweb-site .hero-section--row > .container {
+    max-width: min(960px, 100%) !important;
+    padding-inline: clamp(1rem, 4vw, 1.5rem) !important;
+}
+
+.neoxweb-site .nx-page-hero-row,
+.neoxweb-site .hero-section--row .contact-hero-row {
+    border-bottom: none !important;
+    padding: 0 !important;
+}
+
+.neoxweb-site .pr-split,
+.neoxweb-site .pr-split--reverse {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 240px) !important;
+    direction: ltr !important;
+}
+
+.neoxweb-site .pr-split__body {
+    grid-column: 1 !important;
+    text-align: left !important;
+}
+
+.neoxweb-site .pr-split__media {
+    grid-column: 2 !important;
+    order: unset !important;
+    max-width: 240px !important;
+    margin-left: auto !important;
+}
+
+/* ============================================================
+   FINAL POLISH — bigger images + readable text (site-wide)
+   ============================================================ */
+
+.neoxweb-site .contact-hero-row,
+.neoxweb-site .hero-section--row .contact-hero-row {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px) !important;
+    gap: clamp(1.25rem, 3vw, 2rem) !important;
+}
+
+.neoxweb-site .contact-hero-row__media,
+.neoxweb-site .hero-section--row .contact-hero-row__media {
+    max-width: 420px !important;
+    min-height: clamp(220px, 32vw, 320px) !important;
+    padding: 0.5rem !important;
+}
+
+.neoxweb-site .contact-hero-row__media img,
+.neoxweb-site .hero-section--row .contact-hero-row__media img {
+    max-height: min(340px, 42vw) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+}
+
+.neoxweb-site .nx-portfolio-row,
+.neoxweb-site .nx-pro-split,
+.neoxweb-site .contact-hero-row,
+.neoxweb-site .nx-page-hero-row {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 360px) !important;
+}
+
+.neoxweb-site .nx-portfolio-row__media,
+.neoxweb-site .nx-pro-split__media,
+.neoxweb-site .nx-pro-split__media--full,
+.neoxweb-site .nx-portfolio-row__media--full,
+.neoxweb-site .nx-team-card__img,
+.neoxweb-site .svc-showcase-card__img,
+.neoxweb-site .web-hero-visual {
+    max-width: 360px !important;
+    min-height: clamp(160px, 20vw, 240px) !important;
+    padding: 0.5rem !important;
+}
+
+.neoxweb-site .nx-portfolio-row__media img,
+.neoxweb-site .nx-pro-split__media img,
+.neoxweb-site .nx-pro-split__media--full img,
+.neoxweb-site .nx-portfolio-row__media--full img,
+.neoxweb-site .nx-team-card__img img,
+.neoxweb-site .svc-showcase-card__img img,
+.neoxweb-site .contact-hero-row__media img,
+.neoxweb-site .nx-auto-row img,
+.neoxweb-site .web-hero-visual-icon img {
+    max-height: min(280px, 36vw) !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+}
+
+.neoxweb-site .nx-portfolio-row__copy h3,
+.neoxweb-site .nx-pro-split__body h2,
+.neoxweb-site .nx-pro-split__body h3,
+.neoxweb-site .neox-service-card__body h3,
+.neoxweb-site .contact-hero-inner .hero-title {
+    font-size: clamp(1.05rem, 2vw, 1.25rem) !important;
+    line-height: 1.4 !important;
+}
+
+.neoxweb-site .nx-portfolio-row__copy p,
+.neoxweb-site .nx-pro-split__body p,
+.neoxweb-site .neox-service-card__body p,
+.neoxweb-site .contact-hero-inner .hero-text,
+.neoxweb-site .contact-hero-lead,
+.neoxweb-site .nx-page-hero__lead {
+    font-size: clamp(0.9rem, 1.6vw, 1rem) !important;
+    line-height: 1.65 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.neoxweb-site main .container {
+    max-width: min(1280px, 100%) !important;
+}
+
+@media (max-width: 640px) {
+    .neoxweb-site .contact-hero-row,
+.neoxweb-site .hero-section--row .contact-hero-row {
+        grid-template-columns: 1fr minmax(160px, 220px) !important;
+    }
+
+    .neoxweb-site .contact-hero-row__media,
+    .neoxweb-site .nx-portfolio-row__media,
+    .neoxweb-site .nx-pro-split__media {
+        max-width: 220px !important;
+        min-height: 140px !important;
+    }
+
+    .neoxweb-site .nx-portfolio-row__media img,
+    .neoxweb-site .contact-hero-row__media img {
+        max-height: 180px !important;
+    }
+}

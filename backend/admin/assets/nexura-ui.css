@@ -1,0 +1,373 @@
+/**
+ * Nexura Admin — Premium UI design system
+ */
+
+:root {
+    --nx-brand: #8b5cf6;
+    --nx-brand-2: #10b981;
+    --nx-bg: #020617;
+    --nx-surface: #0f172a;
+    --nx-border: rgba(148, 163, 184, 0.12);
+    --nx-radius: 1rem;
+    --nx-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    --nx-transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.light {
+    --nx-bg: #f8fafc;
+    --nx-surface: #ffffff;
+    --nx-border: rgba(15, 23, 42, 0.1);
+}
+
+html.light body.nx-app-body {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+html.light .bg-slate-950 { background-color: #f8fafc !important; }
+html.light .bg-slate-900 { background-color: #ffffff !important; }
+html.light .bg-slate-900\/80 { background-color: rgba(255,255,255,0.95) !important; }
+html.light .border-slate-800 { border-color: #e2e8f0 !important; }
+html.light .text-slate-100 { color: #0f172a !important; }
+html.light .text-slate-400 { color: #64748b !important; }
+html.light .text-slate-500 { color: #94a3b8 !important; }
+html.light aside#sidebar { background: #fff; }
+
+/* Animations */
+.nx-animate-in {
+    animation: nxFadeIn 0.35s ease both;
+}
+
+@keyframes nxFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.nx-stat-card {
+    animation: nxFadeIn 0.4s ease both;
+}
+
+/* Buttons */
+.nx-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.625rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: transform var(--nx-transition), box-shadow var(--nx-transition), background var(--nx-transition);
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.nx-btn:active { transform: scale(0.98); }
+
+.nx-btn-primary {
+    background: linear-gradient(135deg, #7c3aed, #10b981);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.25);
+}
+
+.nx-btn-primary:hover { filter: brightness(1.05); }
+
+.nx-btn-secondary {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: var(--nx-border);
+    color: #e2e8f0;
+}
+
+.nx-btn-danger {
+    background: rgba(239, 68, 68, 0.12);
+    border-color: rgba(239, 68, 68, 0.35);
+    color: #fca5a5;
+}
+
+.nx-btn-ghost {
+    background: transparent;
+    border-color: var(--nx-border);
+    color: #94a3b8;
+}
+
+.nx-icon-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.65rem;
+    border: 1px solid var(--nx-border);
+    color: #94a3b8;
+    transition: background var(--nx-transition);
+}
+
+.nx-icon-btn:hover { background: rgba(148, 163, 184, 0.08); color: #fff; }
+
+/* Inputs */
+.nx-input,
+.nx-select,
+.nx-textarea {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    border-radius: 0.75rem;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid var(--nx-border);
+    color: inherit;
+    font-size: 0.875rem;
+    transition: border-color var(--nx-transition), box-shadow var(--nx-transition);
+}
+
+.nx-input:focus,
+.nx-select:focus,
+.nx-textarea:focus {
+    outline: none;
+    border-color: rgba(139, 92, 246, 0.55);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+html.light .nx-input,
+html.light .nx-select,
+html.light .nx-textarea {
+    background: #fff;
+}
+
+/* Cards & tables */
+.nx-card {
+    border-radius: 1rem;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid var(--nx-border);
+}
+
+.nx-table thead {
+    color: #94a3b8;
+    border-bottom: 1px solid var(--nx-border);
+}
+
+.nx-table th,
+.nx-table td {
+    padding: 0.875rem 1.5rem;
+    text-align: left;
+    font-size: 0.875rem;
+}
+
+.nx-table tbody tr {
+    border-bottom: 1px solid rgba(148, 163, 184, 0.06);
+    transition: background var(--nx-transition);
+}
+
+.nx-table tbody tr:hover { background: rgba(139, 92, 246, 0.04); }
+
+.nx-empty {
+    padding: 2.5rem 1.5rem !important;
+    text-align: center;
+    color: #64748b;
+}
+
+.nx-th-sort {
+    cursor: pointer;
+    user-select: none;
+}
+
+.nx-th-sort:hover { color: #c4b5fd; }
+
+.nx-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    border-top: 1px solid var(--nx-border);
+    font-size: 0.8125rem;
+    color: #94a3b8;
+}
+
+/* Alerts */
+.nx-alert {
+    padding: 0.875rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.nx-alert-error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+}
+
+.nx-alert-info {
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    color: #cbd5e1;
+}
+
+/* Modals */
+.nx-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.nx-modal.hidden { display: none !important; }
+
+.nx-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(4px);
+}
+
+.nx-modal-panel {
+    position: relative;
+    width: 100%;
+    max-width: 28rem;
+    border-radius: 1rem;
+    background: #0f172a;
+    border: 1px solid var(--nx-border);
+    padding: 1.5rem;
+    box-shadow: var(--nx-shadow);
+    animation: nxModalIn 0.25s ease;
+}
+
+html.light .nx-modal-panel { background: #fff; }
+
+@keyframes nxModalIn {
+    from { opacity: 0; transform: scale(0.96) translateY(8px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Page loader */
+.nx-page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2, 6, 23, 0.55);
+    backdrop-filter: blur(3px);
+}
+
+.nx-page-loader.hidden { display: none !important; }
+
+.nx-spinner {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 3px solid rgba(139, 92, 246, 0.2);
+    border-top-color: #8b5cf6;
+    animation: nxSpin 0.8s linear infinite;
+}
+
+@keyframes nxSpin { to { transform: rotate(360deg); } }
+
+/* Toast stack */
+#toastStack {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: min(24rem, calc(100vw - 2rem));
+}
+
+.nx-toast {
+    padding: 0.875rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    box-shadow: var(--nx-shadow);
+    animation: nxToastIn 0.28s ease;
+}
+
+.nx-toast-success { background: #0f172a; border-color: rgba(16, 185, 129, 0.35); color: #6ee7b7; }
+.nx-toast-error { background: #450a0a; border-color: rgba(239, 68, 68, 0.4); color: #fca5a5; }
+.nx-toast-info { background: #0f172a; border-color: rgba(139, 92, 246, 0.35); color: #c4b5fd; }
+
+@keyframes nxToastIn {
+    from { opacity: 0; transform: translateX(12px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Notifications dropdown */
+.nx-notif-panel {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    width: min(22rem, calc(100vw - 2rem));
+    max-height: 20rem;
+    overflow-y: auto;
+    border-radius: 0.875rem;
+    background: #0f172a;
+    border: 1px solid var(--nx-border);
+    box-shadow: var(--nx-shadow);
+    display: none;
+}
+
+.nx-notif-panel.open { display: block; animation: nxFadeIn 0.2s ease; }
+
+.nx-notif-item {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.06);
+    font-size: 0.8125rem;
+}
+
+/* Profile menu */
+.nx-profile-panel {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    min-width: 12rem;
+    border-radius: 0.875rem;
+    background: #0f172a;
+    border: 1px solid var(--nx-border);
+    box-shadow: var(--nx-shadow);
+    display: none;
+    overflow: hidden;
+}
+
+.nx-profile-panel.open { display: block; animation: nxFadeIn 0.2s ease; }
+
+.nx-profile-panel a,
+.nx-profile-panel button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: #cbd5e1;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.nx-profile-panel a:hover,
+.nx-profile-panel button:hover { background: rgba(148, 163, 184, 0.08); }
+
+/* SPA content transition */
+#appContent.nx-loading { opacity: 0.45; pointer-events: none; transition: opacity 0.2s ease; }
+
+/* Nav active indicator */
+.nx-nav-active {
+    position: relative;
+}
+
+.nx-nav-active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #8b5cf6, #10b981);
+}

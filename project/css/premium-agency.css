@@ -1,0 +1,671 @@
+/**
+ * NEOXWEB — Premium Agency UI Layer
+ * Existing green/black palette only — enhanced contrast, depth, motion
+ */
+
+.neoxweb-site {
+    --pa-green: #4ade80;
+    --pa-green-mid: #22c55e;
+    --pa-green-deep: #10b981;
+    --pa-green-glow: rgba(74, 222, 128, 0.35);
+    --pa-green-soft: rgba(74, 222, 128, 0.12);
+    --pa-surface: rgba(16, 16, 16, 0.82);
+    --pa-surface-elevated: rgba(22, 22, 22, 0.92);
+    --pa-border: rgba(255, 255, 255, 0.08);
+    --pa-border-hover: rgba(74, 222, 128, 0.28);
+    --pa-text: #f1f5f9;
+    --pa-muted: #b4bcc8;
+    --pa-radius-xl: 22px;
+    --pa-radius-lg: 18px;
+    --pa-radius-md: 14px;
+    --pa-shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.22);
+    --pa-shadow-md: 0 12px 40px rgba(0, 0, 0, 0.32);
+    --pa-shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(74, 222, 128, 0.06);
+    --pa-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --pa-section-y: clamp(3.5rem, 7vw, 6rem);
+}
+
+/* ── Base & typography ── */
+.neoxweb-site {
+    color: var(--pa-text);
+    text-rendering: optimizeLegibility;
+}
+
+.neoxweb-site main p,
+.neoxweb-site main li {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.neoxweb-site .section-padding,
+.neoxweb-site .pr-section,
+.neoxweb-site .ui-section,
+.neoxweb-site .cs-section {
+    padding-block: var(--pa-section-y);
+}
+
+.neoxweb-site .section-tag,
+.neoxweb-site .ui-section-tag,
+.neoxweb-site .pr-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--pa-green);
+    background: var(--pa-green-soft);
+    border: 1px solid rgba(74, 222, 128, 0.22);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.neoxweb-site .section-header h2,
+.neoxweb-site .ui-section-title,
+.neoxweb-site .nx-page-hero h1,
+.neoxweb-site .svc-banner-hero h1 {
+    text-wrap: balance;
+}
+
+.neoxweb-site .text-neox-green,
+.neoxweb-site .nx-gradient-text,
+.neoxweb-site .ui-gradient-text {
+    background: linear-gradient(135deg, #86efac 0%, var(--pa-green) 45%, var(--pa-green-deep) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ── Glass panels ── */
+.neoxweb-site .glass-panel,
+.neoxweb-site .contact-info-card,
+.neoxweb-site .contact-form-pro,
+.neoxweb-site .contact-form-neoxweb {
+    background: linear-gradient(155deg, rgba(24, 24, 24, 0.78), rgba(10, 10, 10, 0.88));
+    border: 1px solid var(--pa-border);
+    border-radius: var(--pa-radius-xl);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--pa-shadow-sm);
+}
+
+/* ── Buttons (all variants) ── */
+.neoxweb-site .btn,
+.neoxweb-site .btn-hero-primary,
+.neoxweb-site .btn-neoxweb,
+.neoxweb-site .btn-pro-gradient,
+.neoxweb-site .ui-btn-getstarted,
+.neoxweb-site .pwa-install-btn {
+    position: relative;
+    overflow: hidden;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition:
+        transform 0.28s var(--pa-ease),
+        box-shadow 0.28s var(--pa-ease),
+        border-color 0.28s ease,
+        background 0.28s ease,
+        color 0.28s ease;
+}
+
+.neoxweb-site .btn-hero-primary,
+.neoxweb-site .btn-neoxweb,
+.neoxweb-site .btn-pro-gradient,
+.neoxweb-site .ui-btn-getstarted {
+    background: linear-gradient(135deg, var(--pa-green-mid) 0%, var(--pa-green) 50%, #86efac 100%);
+    color: #0a0a0a !important;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 28px var(--pa-green-glow), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.neoxweb-site .btn-hero-primary:hover,
+.neoxweb-site .btn-neoxweb:hover,
+.neoxweb-site .btn-pro-gradient:hover,
+.neoxweb-site .ui-btn-getstarted:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(74, 222, 128, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    filter: brightness(1.03);
+}
+
+.neoxweb-site .btn-hero-outline,
+.neoxweb-site .btn-neoxweb-outline,
+.neoxweb-site .btn-outline,
+.neoxweb-site .ui-btn-outline {
+    background: rgba(0, 0, 0, 0.28);
+    border: 1.5px solid rgba(74, 222, 128, 0.45);
+    color: #fff !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.neoxweb-site .btn-hero-outline:hover,
+.neoxweb-site .btn-neoxweb-outline:hover,
+.neoxweb-site .btn-outline:hover,
+.neoxweb-site .ui-btn-outline:hover {
+    background: var(--pa-green-soft);
+    border-color: var(--pa-green);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(74, 222, 128, 0.18);
+}
+
+.neoxweb-site .btn-white,
+.neoxweb-site .btn.btn-white {
+    background: #fff;
+    color: #0a0a0a !important;
+    box-shadow: var(--pa-shadow-sm);
+}
+
+.neoxweb-site .btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--pa-shadow-md);
+}
+
+/* ── Cards: services ── */
+.neoxweb-site .neox-service-card {
+    background: linear-gradient(165deg, var(--pa-surface-elevated), rgba(10, 10, 10, 0.96));
+    border: 1px solid var(--pa-border);
+    border-radius: var(--pa-radius-xl);
+    box-shadow: var(--pa-shadow-sm);
+    transition:
+        transform 0.38s var(--pa-ease),
+        box-shadow 0.38s var(--pa-ease),
+        border-color 0.32s ease;
+}
+
+.neoxweb-site .neox-service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(145deg, rgba(74, 222, 128, 0.2), transparent 55%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.neoxweb-site .neox-service-card {
+    position: relative;
+}
+
+.neoxweb-site .neox-service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--pa-border-hover);
+    box-shadow: var(--pa-shadow-lg);
+}
+
+.neoxweb-site .neox-service-card:hover::before {
+    opacity: 1;
+}
+
+.neoxweb-site .neox-service-card__media {
+    position: relative;
+}
+
+.neoxweb-site .neox-service-card__media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, 0.55) 100%);
+    pointer-events: none;
+}
+
+.neoxweb-site .neox-service-card__badge {
+    z-index: 2;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Cards: why, process, team ── */
+.neoxweb-site .nx-why-card,
+.neoxweb-site .nx-process-card,
+.neoxweb-site .team-role-card,
+.neoxweb-site .nx-team-card,
+.neoxweb-site .service-panel,
+.neoxweb-site .svc-advantage-card,
+.neoxweb-site .ui-process-card {
+    background: var(--pa-surface);
+    border: 1px solid var(--pa-border);
+    border-radius: var(--pa-radius-lg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition:
+        transform 0.32s var(--pa-ease),
+        border-color 0.28s ease,
+        box-shadow 0.32s var(--pa-ease);
+}
+
+.neoxweb-site .nx-why-card:hover,
+.neoxweb-site .nx-process-card:hover,
+.neoxweb-site .team-role-card:hover,
+.neoxweb-site .nx-team-card:hover,
+.neoxweb-site .service-panel:hover,
+.neoxweb-site .svc-advantage-card:hover,
+.neoxweb-site .ui-process-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--pa-border-hover);
+    box-shadow: var(--pa-shadow-md);
+}
+
+.neoxweb-site .nx-team-card {
+    overflow: hidden;
+}
+
+.neoxweb-site .nx-team-card__img {
+    overflow: hidden;
+}
+
+.neoxweb-site .nx-team-card__img img {
+    transition: transform 0.55s var(--pa-ease);
+}
+
+.neoxweb-site .nx-team-card:hover .nx-team-card__img img {
+    transform: scale(1.06);
+}
+
+/* ── Testimonials ── */
+.neoxweb-site .testimonial-section {
+    background:
+        radial-gradient(ellipse 70% 50% at 50% 0%, rgba(74, 222, 128, 0.08), transparent 70%),
+        linear-gradient(180deg, transparent, rgba(10, 10, 10, 0.4));
+}
+
+.neoxweb-site .testimonial-slider .slide {
+    background: linear-gradient(160deg, rgba(20, 20, 20, 0.9), rgba(12, 12, 12, 0.95));
+    border: 1px solid var(--pa-border);
+    border-radius: var(--pa-radius-xl);
+    box-shadow: var(--pa-shadow-sm);
+    transition: transform 0.32s var(--pa-ease), border-color 0.28s ease, box-shadow 0.32s ease;
+}
+
+.neoxweb-site .testimonial-slider .slide:hover {
+    transform: translateY(-4px);
+    border-color: var(--pa-border-hover);
+    box-shadow: var(--pa-shadow-md);
+}
+
+.neoxweb-site .testimonial-brand-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--pa-green-soft);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    color: var(--pa-green);
+    margin-bottom: 1rem;
+}
+
+.neoxweb-site .testimonial-author strong {
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+/* ── Pro split & portfolio rows ── */
+.neoxweb-site .nx-pro-split__media,
+.neoxweb-site .nx-portfolio-row__media,
+.neoxweb-site .hero-image-frame {
+    border-radius: var(--pa-radius-xl);
+    border: 1px solid var(--pa-border);
+    box-shadow: var(--pa-shadow-md);
+    transition: transform 0.45s var(--pa-ease), box-shadow 0.45s var(--pa-ease);
+}
+
+.neoxweb-site .nx-pro-split:hover .nx-pro-split__media,
+.neoxweb-site .nx-portfolio-row:hover .nx-portfolio-row__media,
+.neoxweb-site .hero-visual-art:hover .hero-image-frame {
+    transform: translateY(-4px);
+    box-shadow: var(--pa-shadow-lg);
+}
+
+.neoxweb-site .nx-portfolio-row {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease;
+    border-radius: var(--pa-radius-lg);
+    padding-inline: clamp(0.5rem, 2vw, 1rem);
+}
+
+.neoxweb-site .nx-portfolio-row:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.neoxweb-site .nx-pro-split__list li {
+    padding: 0.85rem 1rem;
+    border-radius: var(--pa-radius-md);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.neoxweb-site .nx-pro-split__list li:hover {
+    border-color: rgba(74, 222, 128, 0.18);
+    background: rgba(74, 222, 128, 0.04);
+}
+
+/* ── Portfolio / case study cards ── */
+.neoxweb-site .cs-portfolio-card,
+.neoxweb-site .ui-cs-card,
+.neoxweb-site .nx-stack-card,
+.neoxweb-site .project-card {
+    border-radius: var(--pa-radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--pa-border);
+    background: var(--pa-surface);
+    transition: transform 0.35s var(--pa-ease), box-shadow 0.35s ease, border-color 0.3s ease;
+}
+
+.neoxweb-site .cs-portfolio-card:hover,
+.neoxweb-site .nx-stack-card:hover,
+.neoxweb-site .project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--pa-border-hover);
+    box-shadow: var(--pa-shadow-md);
+}
+
+/* ── Technology & service UI ── */
+.neoxweb-site .ui-tech-tab,
+.neoxweb-site .ui-filter-btn {
+    border-radius: 999px;
+    border: 1px solid var(--pa-border);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--pa-muted);
+    transition: all 0.25s var(--pa-ease);
+}
+
+.neoxweb-site .ui-tech-tab:hover,
+.neoxweb-site .ui-filter-btn:hover {
+    border-color: rgba(74, 222, 128, 0.3);
+    color: #fff;
+}
+
+.neoxweb-site .ui-tech-tab.active,
+.neoxweb-site .ui-filter-btn.active {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(74, 222, 128, 0.12));
+    border-color: var(--pa-green);
+    color: var(--pa-green);
+    box-shadow: 0 4px 16px rgba(74, 222, 128, 0.15);
+}
+
+.neoxweb-site .ui-tech-panel,
+.neoxweb-site .svc-vertical-item,
+.neoxweb-site .svc-engage-card,
+.neoxweb-site .ui-resource-card {
+    border-radius: var(--pa-radius-lg);
+    border: 1px solid var(--pa-border);
+    background: var(--pa-surface);
+    transition: border-color 0.28s ease, transform 0.28s var(--pa-ease);
+}
+
+.neoxweb-site .svc-vertical-item:hover,
+.neoxweb-site .svc-engage-card:hover,
+.neoxweb-site .ui-resource-card:hover {
+    border-color: var(--pa-border-hover);
+    transform: translateY(-3px);
+}
+
+.neoxweb-site .svc-advantage-card i,
+.neoxweb-site .nx-why-card i {
+    filter: drop-shadow(0 4px 12px rgba(74, 222, 128, 0.25));
+}
+
+/* ── Heroes ── */
+.neoxweb-site .hero-section--pro,
+.neoxweb-site .nx-page-hero,
+.neoxweb-site .svc-banner-hero,
+.neoxweb-site .cs-index-hero {
+    position: relative;
+}
+
+.neoxweb-site .hero-section--pro .hero-bg-overlay,
+.neoxweb-site .nx-page-hero .hero-bg-overlay,
+.neoxweb-site .cs-index-hero .hero-bg-overlay {
+    background:
+        linear-gradient(105deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.65) 42%, rgba(0, 0, 0, 0.28) 68%, rgba(0, 0, 0, 0.12) 100%),
+        radial-gradient(ellipse 60% 50% at 85% 40%, rgba(74, 222, 128, 0.1), transparent 65%) !important;
+}
+
+.neoxweb-site .dark-bg {
+    background:
+        linear-gradient(180deg, rgba(8, 8, 8, 0.98) 0%, rgba(12, 12, 12, 0.92) 50%, rgba(8, 8, 8, 0.98) 100%);
+    border-block-color: rgba(74, 222, 128, 0.06);
+}
+
+/* ── CTA bands ── */
+.neoxweb-site .home-cta,
+.neoxweb-site .web-cta,
+.neoxweb-site .cs-cta,
+.neoxweb-site .ui-cta-band,
+.neoxweb-site .site-cta-band {
+    background:
+        radial-gradient(ellipse 80% 70% at 50% 100%, rgba(74, 222, 128, 0.16), transparent 65%),
+        linear-gradient(180deg, rgba(10, 10, 10, 0.6), rgba(6, 6, 6, 0.98));
+    border-top: 1px solid rgba(74, 222, 128, 0.14);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.neoxweb-site .trusted-section {
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.5), rgba(6, 6, 6, 0.95));
+}
+
+.neoxweb-site .trusted-item {
+    padding: 0.65rem 1.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--pa-border);
+    background: rgba(255, 255, 255, 0.04);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s var(--pa-ease);
+}
+
+.neoxweb-site .trusted-item:hover {
+    border-color: var(--pa-border-hover);
+    background: var(--pa-green-soft);
+    transform: translateY(-2px);
+}
+
+/* ── Forms & contact ── */
+.neoxweb-site .contact-form-pro .form-group.floating input,
+.neoxweb-site .contact-form-pro .form-group.floating textarea,
+.neoxweb-site .contact-form-pro .contact-select-wrap select {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--pa-radius-md);
+    color: #fff;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.neoxweb-site .contact-form-pro .form-group.floating input:focus,
+.neoxweb-site .contact-form-pro .form-group.floating textarea:focus,
+.neoxweb-site .contact-form-pro .contact-select-wrap select:focus {
+    border-color: rgba(74, 222, 128, 0.55);
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.12);
+    background: rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.neoxweb-site .contact-channel {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: padding-left 0.22s var(--pa-ease);
+}
+
+.neoxweb-site .contact-channel:hover {
+    padding-left: 0.35rem;
+}
+
+.neoxweb-site .contact-channel-icon {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.neoxweb-site .contact-highlight-card {
+    border-radius: var(--pa-radius-lg);
+    border: 1px solid var(--pa-border);
+    background: var(--pa-surface);
+    transition: transform 0.3s var(--pa-ease), border-color 0.28s ease;
+}
+
+.neoxweb-site .contact-highlight-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--pa-border-hover);
+}
+
+/* ── FAQ ── */
+.neoxweb-site .pr-faq details,
+.neoxweb-site .contact-faq-grid details {
+    border-radius: var(--pa-radius-md);
+    border: 1px solid var(--pa-border);
+    background: rgba(255, 255, 255, 0.03);
+    margin-bottom: 0.65rem;
+    overflow: hidden;
+    transition: border-color 0.25s ease;
+}
+
+.neoxweb-site .pr-faq details[open],
+.neoxweb-site .contact-faq-grid details[open] {
+    border-color: var(--pa-border-hover);
+    background: rgba(74, 222, 128, 0.04);
+}
+
+.neoxweb-site .pr-faq summary,
+.neoxweb-site .contact-faq-grid summary {
+    padding: 1rem 1.15rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    list-style: none;
+}
+
+.neoxweb-site .pr-faq details p,
+.neoxweb-site .contact-faq-grid details p {
+    padding: 0 1.15rem 1rem;
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+/* ── Navbar polish (CSS only — no HTML changes) ── */
+.neoxweb-site .navbar {
+    box-shadow: 0 1px 0 rgba(74, 222, 128, 0.1), 0 10px 40px rgba(0, 0, 0, 0.06) !important;
+}
+
+.neoxweb-site .navbar.scrolled,
+.neoxweb-site .navbar.navbar-scrolled {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(74, 222, 128, 0.12) !important;
+}
+
+.neoxweb-site .navbar__link,
+.neoxweb-site .nav-link {
+    transition: color 0.22s ease, background 0.22s ease;
+}
+
+.neoxweb-site .navbar__link:hover,
+.neoxweb-site .nav-link:hover {
+    color: var(--pa-green-deep) !important;
+}
+
+.neoxweb-site .mega-unified,
+.neoxweb-site .mega-panel {
+    border-radius: var(--pa-radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+/* ── Footer ── */
+.neoxweb-site .site-footer--pro {
+    background: linear-gradient(180deg, #0c0c0c 0%, #050505 100%);
+    border-top: 1px solid rgba(74, 222, 128, 0.1);
+}
+
+.neoxweb-site .footer-uni__bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.neoxweb-site .footer-uni__social a {
+    transition: transform 0.25s var(--pa-ease), background 0.25s ease, color 0.25s ease;
+}
+
+.neoxweb-site .footer-uni__social a:hover {
+    transform: translateY(-3px);
+    color: var(--pa-green) !important;
+}
+
+/* ── Focus & selection ── */
+.neoxweb-site a:focus-visible,
+.neoxweb-site button:focus-visible,
+.neoxweb-site input:focus-visible,
+.neoxweb-site textarea:focus-visible,
+.neoxweb-site select:focus-visible {
+    outline: 2px solid rgba(74, 222, 128, 0.65);
+    outline-offset: 2px;
+}
+
+.neoxweb-site ::selection {
+    background: rgba(74, 222, 128, 0.35);
+    color: #fff;
+}
+
+/* ── Subtle scroll-driven polish ── */
+@media (prefers-reduced-motion: no-preference) {
+    .neoxweb-site .fade-up,
+    .neoxweb-site .ui-fade-up,
+    .neoxweb-site .pr-reveal,
+    .neoxweb-site .cs-reveal {
+        transition: opacity 0.55s var(--pa-ease), transform 0.55s var(--pa-ease);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .neoxweb-site *,
+    .neoxweb-site *::before,
+    .neoxweb-site *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ── Responsive refinements ── */
+@media (max-width: 767px) {
+    .neoxweb-site .section-padding,
+    .neoxweb-site .pr-section,
+    .neoxweb-site .ui-section {
+        padding-block: clamp(2.75rem, 8vw, 4rem);
+    }
+
+    .neoxweb-site .neox-service-cards {
+        gap: 1.15rem;
+    }
+
+    .neoxweb-site .home-cta__inner,
+    .neoxweb-site .section-header.text-center {
+        text-align: left;
+    }
+
+    .neoxweb-site .btn-hero-primary,
+    .neoxweb-site .btn-hero-outline {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .neoxweb-site .neox-service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .neoxweb-site .testimonial-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

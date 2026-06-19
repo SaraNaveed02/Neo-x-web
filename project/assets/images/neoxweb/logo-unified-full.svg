@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" fill="none" role="img" aria-label="NEOXWEB">
+  <defs>
+    <linearGradient id="nxLogoGrad" x1="4" y1="36" x2="36" y2="4" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2dd4bf"/>
+      <stop offset="0.5" stop-color="#4ade80"/>
+      <stop offset="1" stop-color="#facc15"/>
+    </linearGradient>
+    <linearGradient id="nxTextGrad" x1="48" y1="8" x2="196" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#bbf7d0"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="38" height="38" rx="11" fill="#030806" stroke="url(#nxLogoGrad)" stroke-width="1.5" opacity="0.95"/>
+  <path d="M11 11v12c0 4.97 4.03 9 9 9s9-4.03 9-9V11" stroke="url(#nxLogoGrad)" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="30" cy="11" r="2" fill="#4ade80"/>
+  <text x="48" y="27" font-family="Inter,Segoe UI,system-ui,sans-serif" font-size="19" font-weight="700" fill="url(#nxTextGrad)" letter-spacing="-0.5">NEOXWEB</text>
+</svg>

@@ -1,0 +1,66 @@
+/**
+
+ * Desktop = classic website (top navbar)
+
+ * Mobile  = app shell (compact header + bottom tabs)
+
+ */
+
+
+
+@media (max-width: 900px) {
+
+    html.mobile-view #navbar-container,
+
+    html.mobile-view #mainNavbar {
+
+        display: none !important;
+
+    }
+
+
+
+    .custom-cursor {
+
+        display: none !important;
+
+    }
+
+}
+
+
+
+@media (min-width: 901px) {
+
+    #nxAppHeader,
+
+    #nxBottomNav,
+
+    #nxAppDrawer,
+
+    #nxPageLoader,
+
+    .nx-bottom-nav,
+
+    .ui-bottom-nav,
+
+    .ui-chat-fab {
+
+        display: none !important;
+
+    }
+
+
+
+    body.nx-app-body .ui-bottom-nav,
+
+    body.nx-app-body .ui-chat-fab,
+
+    body.nx-app-body #nxAppHeader {
+
+        display: none !important;
+
+    }
+
+}
+

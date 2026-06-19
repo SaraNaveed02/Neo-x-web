@@ -1,0 +1,210 @@
+/* Resources Hub — curated dev learning links */
+.rh-hub {
+    --rh-accent: #2ecc71;
+    --rh-accent-dim: rgba(46, 204, 113, 0.12);
+    --rh-bg: #0a0a0a;
+    --rh-card: #111111;
+    --rh-border: #2a2a2a;
+    --rh-text: #e0e0e0;
+    --rh-muted: #888;
+}
+
+.rh-hub .rh-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.rh-hub .rh-stat {
+    background: var(--rh-card);
+    border: 1px solid var(--rh-border);
+    border-radius: 12px;
+    padding: 1.35rem 1rem;
+    text-align: center;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.rh-hub .rh-stat:hover {
+    transform: translateY(-4px);
+    border-color: var(--rh-accent);
+}
+
+.rh-hub .rh-stat strong {
+    display: block;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--rh-accent);
+    line-height: 1.1;
+}
+
+.rh-hub .rh-stat span {
+    display: block;
+    margin-top: 0.45rem;
+    font-size: 0.85rem;
+    color: var(--rh-muted);
+}
+
+.rh-hub .rh-filter {
+    background: var(--rh-card);
+    border: 1px solid var(--rh-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.rh-hub .rh-search {
+    width: 100%;
+    padding: 0.75rem 1.1rem;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    font-family: inherit;
+    margin-bottom: 0.85rem;
+}
+
+.rh-hub .rh-search:focus {
+    outline: none;
+    border-color: var(--rh-accent);
+}
+
+.rh-hub .rh-filter-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.rh-hub .rh-filter-btn {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 0.82rem;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.rh-hub .rh-filter-btn:hover,
+.rh-hub .rh-filter-btn.is-active {
+    background: var(--rh-accent);
+    border-color: var(--rh-accent);
+    color: #000;
+    font-weight: 700;
+}
+
+.rh-hub .rh-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: 1.25rem;
+}
+
+.rh-hub .rh-card {
+    background: var(--rh-card);
+    border: 1px solid var(--rh-border);
+    border-radius: 12px;
+    padding: 1.35rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.rh-hub .rh-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--rh-accent);
+    transform: scaleY(0);
+    transition: transform 0.25s;
+}
+
+.rh-hub .rh-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--rh-accent);
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.08);
+}
+
+.rh-hub .rh-card:hover::before {
+    transform: scaleY(1);
+}
+
+.rh-hub .rh-cat {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    background: var(--rh-accent-dim);
+    color: var(--rh-accent);
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.rh-hub .rh-card h3 {
+    font-size: 1.15rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+}
+
+.rh-hub .rh-card p {
+    color: var(--rh-muted);
+    font-size: 0.88rem;
+    margin-bottom: 0.65rem;
+    line-height: 1.55;
+}
+
+.rh-hub .rh-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.65rem;
+}
+
+.rh-hub .rh-tag {
+    background: #1a1a1a;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    color: #777;
+}
+
+.rh-hub .rh-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--rh-accent);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.88rem;
+}
+
+.rh-hub .rh-link:hover {
+    color: #58d68d;
+    text-decoration: underline;
+}
+
+.rh-hub .rh-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: var(--rh-muted);
+    border: 1px dashed var(--rh-border);
+    border-radius: 12px;
+}
+
+.rh-hub .rh-note {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.82rem;
+    color: var(--rh-muted);
+}
+
+@media (max-width: 640px) {
+    .rh-hub .rh-stat strong { font-size: 1.75rem; }
+}

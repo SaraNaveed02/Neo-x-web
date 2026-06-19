@@ -1,0 +1,15 @@
+# Git se deploy: repo root = "time" folder
+# Netlify Dashboard → Base directory: project (recommended)
+# Ya yeh file repo root par rakhein
+
+[build]
+  base = "project"
+  publish = "."
+  # navbar-embed.js is committed; skip build to avoid deploy failures
+  # command = "node scripts/build-navbar-embed.js"
+
+[[redirects]]
+  from = "/project/*"
+  to = "/:splat"
+  status = 301
+  force = true

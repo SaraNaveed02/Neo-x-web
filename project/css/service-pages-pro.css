@@ -1,0 +1,175 @@
+/**
+ * NEOXWEB — Service pages: hero polish + professional image placement
+ */
+
+/* Technology split heroes — keep side image visible */
+body.neoxweb-site.service-page .web-hero.hero-section--pro:has(.web-hero-visual-icon) .web-hero-visual,
+body.neoxweb-site.service-page .web-hero:has(.web-hero-visual-icon) .web-hero-visual {
+    display: flex !important;
+}
+
+body.neoxweb-site.service-page .web-hero:has(.web-hero-visual-icon).hero-section--pro .web-hero-grid {
+    grid-template-columns: 1fr 1fr !important;
+}
+
+body.neoxweb-site.service-page .web-hero:has(.web-hero-visual-icon).hero-section--pro .web-hero-copy {
+    max-width: 36rem;
+}
+
+/* Full-width hero — hide duplicate side visual when homepage-style bg is active */
+body.neoxweb-site.service-page .web-hero.hero-section--pro:not(:has(.web-hero-visual-icon)) .web-hero-visual,
+body.neoxweb-site.service-page .web-hero.hero-section--pro .web-hero-float-card,
+body.neoxweb-site.service-page .svc-banner-hero.hero-section--pro .svc-banner-hero__bg,
+body.neoxweb-site.service-page .svc-banner-hero.hero-section--pro .svc-banner-hero__overlay {
+    display: none !important;
+}
+
+body.neoxweb-site.service-page .web-hero.hero-section--pro:not(:has(.web-hero-visual-icon)) .web-hero-grid {
+    grid-template-columns: 1fr !important;
+    max-width: min(1200px, calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+body.neoxweb-site.service-page .web-hero.hero-section--pro:not(:has(.web-hero-visual-icon)) .web-hero-copy {
+    max-width: 720px;
+}
+
+body.neoxweb-site.service-page .svc-banner-hero.hero-section--pro .svc-banner-hero__inner {
+    max-width: min(1200px, calc(100% - 2rem));
+    margin-inline: auto;
+    padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+body.neoxweb-site.service-page .web-hero.hero-section--pro .web-hero-metrics {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+body.neoxweb-site.service-page .web-hero.hero-section--pro .web-metric {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+body.neoxweb-site.service-page .web-hero.hero-section--pro .web-metric i {
+    color: #4ade80;
+}
+
+body.neoxweb-site.service-page .web-hero.hero-section--pro h1,
+body.neoxweb-site.service-page .svc-banner-hero.hero-section--pro h1 {
+    color: #fff !important;
+}
+
+body.neoxweb-site.service-page .web-hero.hero-section--pro .web-hero-lead,
+body.neoxweb-site.service-page .svc-banner-hero.hero-section--pro .svc-banner-hero__lead {
+    color: rgba(255, 255, 255, 0.78) !important;
+}
+
+body.neoxweb-site.service-page .web-hero.hero-section--pro .section-tag,
+body.neoxweb-site.service-page .svc-banner-hero.hero-section--pro .ui-section-tag,
+body.neoxweb-site.service-page .svc-banner-hero.hero-section--pro .svc-breadcrumb,
+body.neoxweb-site.service-page .svc-banner-hero.hero-section--pro .svc-breadcrumb a {
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+
+body.neoxweb-site.service-page .svc-banner-hero.hero-section--pro .svc-breadcrumb a:hover {
+    color: #4ade80 !important;
+}
+
+body.neoxweb-site.service-page .hero-section--pro .hero-particles-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.72;
+}
+
+/* Content section images — cover, aligned, no padding gaps */
+body.neoxweb-site.service-page .visual-art-wrap {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #0a0a0a;
+}
+
+body.neoxweb-site.service-page .visual-art-wrap .visual-art,
+body.neoxweb-site.service-page img.nx-photo:not(.navbar__logo-img):not(.footer-logo-img) {
+    object-fit: cover !important;
+    object-position: center center !important;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    padding: 0 !important;
+    filter: none;
+    display: block;
+}
+
+body.neoxweb-site.service-page .svc-vertical-item__icon {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 140px;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    background: #0a0a0a;
+}
+
+body.neoxweb-site.service-page .svc-vertical-item__icon .visual-art-wrap {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: unset;
+    min-height: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none;
+    border-radius: inherit;
+}
+
+body.neoxweb-site.service-page .pr-split__media .visual-art-wrap {
+    aspect-ratio: 16 / 10;
+    max-height: 320px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.neoxweb-site.service-page .web-hero-visual-icon {
+    width: min(100%, 420px);
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+    background: #0a0a0a;
+}
+
+body.neoxweb-site.service-page .web-hero-visual-icon .visual-art-wrap,
+body.neoxweb-site.service-page .web-hero-visual-icon img.visual-art--hero {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    aspect-ratio: unset;
+    object-fit: cover !important;
+    object-position: center center !important;
+    animation: none !important;
+    filter: none !important;
+}
+
+body.neoxweb-site.service-page .service-panel {
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    body.neoxweb-site.service-page .svc-vertical-item {
+        grid-template-columns: 1fr !important;
+    }
+
+    body.neoxweb-site.service-page .svc-vertical-item__icon {
+        max-width: 100%;
+        width: 100%;
+        margin: 0.75rem 0 0;
+        aspect-ratio: 16 / 9;
+        max-height: 200px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+}

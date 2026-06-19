@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Mobile wellness app">
+  <defs>
+    <linearGradient id="mg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="mg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#mg2)"/>
+  <circle cx="400" cy="250" r="200" fill="#10b981" opacity="0.08"/>
+  <rect x="310" y="60" width="180" height="380" rx="36" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <rect x="330" y="100" width="140" height="28" rx="10" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="400" cy="200" r="50" fill="url(#mg1)" opacity="0.9"/>
+  <rect x="340" y="280" width="120" height="12" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <rect x="340" y="305" width="90" height="10" rx="5" fill="rgba(255,255,255,0.08)"/>
+  <rect x="340" y="340" width="140" height="44" rx="12" fill="url(#mg1)" opacity="0.7"/>
+</svg>

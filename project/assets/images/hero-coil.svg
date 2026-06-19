@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="coilGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5c0"/>
+      <stop offset="40%" stop-color="#4ade80"/>
+      <stop offset="75%" stop-color="#a3e635"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+    <linearGradient id="coilGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="50%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <filter id="coilGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- 3D coiled ribbon — Unified Infotech style -->
+  <g filter="url(#coilGlow)">
+    <path d="M80 340 C 40 280, 30 200, 70 140 C 110 80, 200 50, 300 60 C 400 70, 480 130, 500 210 C 520 290, 460 360, 360 380 C 260 400, 160 370, 100 320" stroke="url(#coilGrad)" stroke-width="48" stroke-linecap="round" fill="none"/>
+    <path d="M100 320 C 160 260, 260 240, 360 260 C 460 280, 520 340, 480 390 C 440 420, 340 410, 260 380" stroke="url(#coilGrad2)" stroke-width="40" stroke-linecap="round" fill="none" opacity="0.9"/>
+    <path d="M180 200 C 220 150, 300 130, 380 160 C 460 190, 490 260, 440 310" stroke="url(#coilGrad)" stroke-width="32" stroke-linecap="round" fill="none" opacity="0.75"/>
+    <path d="M240 120 C 290 90, 360 95, 410 130 C 460 165, 470 220, 430 260" stroke="url(#coilGrad2)" stroke-width="26" stroke-linecap="round" fill="none" opacity="0.6"/>
+  </g>
+  <!-- Highlight ridges -->
+  <path d="M80 340 C 40 280, 30 200, 70 140 C 110 80, 200 50, 300 60 C 400 70, 480 130, 500 210" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>

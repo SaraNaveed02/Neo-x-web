@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="NEOXWEB">
+  <defs><linearGradient id="h" x1="0" y1="630" x2="1200" y2="0"><stop stop-color="#030806"/><stop offset="1" stop-color="#14532d"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#h)"/>
+  <circle cx="950" cy="120" r="200" fill="#22c55e" opacity="0.15"/>
+  <text x="80" y="320" fill="#fff" font-family="Inter,sans-serif" font-size="72" font-weight="800">NEOXWEB</text>
+  <text x="80" y="390" fill="#4ade80" font-family="Inter,sans-serif" font-size="32">Web � SEO � PPC � Pakistan</text>
+</svg>

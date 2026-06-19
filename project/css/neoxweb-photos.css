@@ -1,0 +1,209 @@
+/* NEOXWEB — live site photo styling (object-fit, hero bg, logo) */
+
+.visual-art-wrap .visual-art,
+img.nx-photo {
+    object-fit: contain;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0 !important;
+    filter: none;
+    border-radius: inherit;
+    display: block;
+}
+
+.neox-service-card__media .visual-art-wrap,
+.neox-service-card__media .visual-art-wrap--card {
+    position: absolute;
+    inset: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: #0a0a0a;
+    aspect-ratio: unset;
+}
+
+.visual-art-wrap--card .visual-art,
+.visual-art-wrap--project .visual-art,
+.visual-art-wrap--media .visual-art,
+.visual-art-wrap--blog .visual-art,
+.nx-team-card__img .visual-art {
+    object-fit: cover;
+}
+
+.visual-art--hero,
+.visual-art--hero-home {
+    object-fit: cover;
+    border-radius: var(--radius, 12px);
+}
+
+.hero-photo-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url('../assets/images/neoxweb/hero-bg-new.jpg') top right / cover no-repeat;
+    opacity: 0.28;
+    pointer-events: none;
+}
+
+.hero-section--pro .hero-visual-art img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    min-height: 280px;
+    border-radius: 16px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.navbar__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.navbar__logo-mark {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+}
+
+.navbar__logo-img:not(.navbar__logo-img--nx) {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
+.navbar__logo-img--nx,
+#navbar-container img.navbar__logo-img--nx {
+    height: 48px !important;
+    width: auto !important;
+    max-height: 48px !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+    display: block;
+    filter: none !important;
+}
+
+.ui-mobile-logo .navbar__logo-img--nx {
+    height: 58px !important;
+    width: auto !important;
+    max-height: 58px !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+    margin-left: 0;
+    padding-left: 0;
+    display: block;
+    margin-bottom: 0;
+    border-radius: 0;
+    background: transparent;
+    filter: none !important;
+}
+
+/* Page images — top-aligned for content sections; tech hero centered */
+.pr-split__media .visual-art-wrap,
+.svc-vertical-item__icon .visual-art-wrap {
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+
+.neoxweb-site .web-hero-visual-icon,
+.neoxweb-site .web-hero-visual-icon .visual-art-wrap {
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.pr-split__media .visual-art,
+.svc-vertical-item__icon .visual-art,
+.svc-vertical-item__icon img.nx-photo,
+.web-hero-visual-icon .visual-art--hero {
+    object-fit: cover !important;
+    object-position: center center !important;
+}
+
+.neoxweb-site main > section:first-of-type,
+.neoxweb-site main > .svc-banner-hero:first-child,
+.neoxweb-site main > .web-hero:first-child {
+    margin-top: 0;
+}
+
+/* Top hero image — flush with navbar (bg from y=0, text below nav) */
+.neoxweb-site .hero-section--pro,
+.neoxweb-site .nx-page-hero,
+.neoxweb-site .svc-banner-hero,
+.neoxweb-site .web-hero {
+    padding-top: 0 !important;
+}
+
+.neoxweb-site .hero-tech-bg,
+.neoxweb-site .hero-neoxweb-bg,
+.neoxweb-site .hero-bg-overlay,
+.neoxweb-site .hero-particles-canvas,
+.neoxweb-site .nx-page-hero__particles,
+.neoxweb-site .svc-banner-hero__bg,
+.neoxweb-site .svc-banner-hero__overlay {
+    top: 0 !important;
+}
+
+.neoxweb-site .hero-tech-bg img {
+    top: 0 !important;
+    object-position: top right !important;
+}
+
+.neoxweb-site .nx-page-hero__inner,
+.neoxweb-site.home-page .hero-grid--bg,
+.neoxweb-site .svc-banner-hero__inner,
+.neoxweb-site .web-hero > .container,
+.neoxweb-site .web-hero-grid {
+    padding-top: calc(var(--nav-h, 72px) + clamp(2rem, 4.5vw, 3.75rem)) !important;
+}
+
+/* Home, About, Portfolio, Team — hero text left */
+.home-page .hero-copy,
+.home-page .hero-section--pro .hero-grid--bg,
+.hero-section--pro .nx-page-hero__inner,
+.hero-section--pro .container.nx-page-hero__inner,
+.hero-section--pro .cs-container {
+    text-align: left !important;
+    justify-items: start !important;
+}
+
+.hero-section--pro .nx-page-hero__actions,
+.hero-section--pro .hero-actions {
+    justify-content: flex-start !important;
+}
+
+.hero-section--pro .nx-page-hero__stats {
+    justify-content: flex-start !important;
+}
+
+.hero-section--pro .nx-page-hero__stat {
+    text-align: left !important;
+}
+
+.cs-index-hero.hero-section--pro {
+    text-align: left !important;
+}
+
+.cs-index-hero.hero-section--pro p,
+.cs-index-hero.hero-section--pro .cs-container p {
+    margin-inline: 0 !important;
+}
+
+.footer-logo-img {
+    height: 44px;
+    width: auto;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 900px) {
+    .hero-photo-bg {
+        opacity: 0.22;
+        background-position: center bottom;
+    }
+}

@@ -1,0 +1,130 @@
+/**
+ * NEOXWEB — Global image quality, alignment, responsiveness (all pages)
+ * Load last — prevents stretch, bad crop, misalignment
+ */
+
+/* Base: never distort */
+.neoxweb-site img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.neoxweb-site img.nx-photo,
+.neoxweb-site .visual-art {
+    image-rendering: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Content images — full visible, no stretch */
+.neoxweb-site .nx-portfolio-row__media img,
+.neoxweb-site .nx-portfolio-row__media--full img,
+.neoxweb-site .nx-pro-split__media img,
+.neoxweb-site .nx-team-card__img img,
+.neoxweb-site .svc-showcase-card__img img,
+.neoxweb-site .contact-hero-row__media img,
+.neoxweb-site .web-hero-visual-icon img,
+.neoxweb-site .visual-art-wrap img,
+.neoxweb-site .cs-card__media img,
+.neoxweb-site .ui-cs-card__media img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin-inline: auto;
+}
+
+/* Portfolio / row media frames */
+.neoxweb-site .nx-portfolio-row__media,
+.neoxweb-site .nx-portfolio-row__media--full,
+.neoxweb-site .nx-pro-split__media,
+.neoxweb-site .nx-team-card__img,
+.neoxweb-site .svc-showcase-card__img,
+.neoxweb-site .contact-hero-row__media,
+.neoxweb-site .web-hero-visual,
+.neoxweb-site .cs-card__media,
+.neoxweb-site .ui-cs-card__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 0.75rem;
+}
+
+.neoxweb-site .nx-portfolio-row__media img,
+.neoxweb-site .nx-portfolio-row__media--full img {
+    max-height: clamp(140px, 28vw, 220px);
+    width: 100%;
+    object-fit: contain;
+}
+
+/* 4-column strip — balanced cover inside fixed frame */
+.neoxweb-site .nx-img-strip__media {
+    overflow: hidden;
+    background: #0a0a0a;
+}
+
+.neoxweb-site .nx-img-strip__media img {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+}
+
+/* Hero background images — cover, anchored right */
+.neoxweb-site .hero-tech-bg img,
+.neoxweb-site .hero-neoxweb-bg img {
+    object-fit: cover;
+    object-position: top right;
+}
+
+/* Logos & icons — crisp, no stretch */
+.neoxweb-site .navbar__logo img,
+.neoxweb-site .footer-uni__mark img,
+.neoxweb-site .service-panel-icon img,
+.neoxweb-site .tech-hub__col img {
+    object-fit: contain;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.neoxweb-site .service-panel-icon img {
+    max-height: 48px;
+}
+
+/* Team avatars */
+.neoxweb-site .nx-team-card__img img {
+    width: 100%;
+    max-width: 120px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+}
+
+/* Testimonial / quote images */
+.neoxweb-site .testimonial-card img,
+.neoxweb-site .nx-testimonial img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+    .neoxweb-site .nx-img-strip__media img {
+        object-position: center top;
+    }
+
+    .neoxweb-site .nx-portfolio-row__media,
+    .neoxweb-site .nx-portfolio-row__media--full {
+        max-width: 100% !important;
+    }
+}

@@ -1,0 +1,5 @@
+.env
+config/social-config.local.php
+config/microsoft-config.local.php
+uploads/*
+!uploads/.gitkeep

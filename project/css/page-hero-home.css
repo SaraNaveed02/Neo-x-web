@@ -1,0 +1,174 @@
+/**
+ * Inner pages — homepage jaisa top hero (home-pro.css ke sath)
+ */
+
+/* Inner heroes: compact professional height (not full viewport) */
+body.neoxweb-site:not(.home-page) .hero-section--pro {
+    position: relative !important;
+    min-height: clamp(420px, 58vh, 620px) !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    padding: 0 0 clamp(2rem, 4vw, 2.75rem) !important;
+    overflow: hidden !important;
+    background: #000 !important;
+    border-bottom: none !important;
+}
+
+body.neoxweb-site:not(.home-page) .hero-section--pro .hero-tech-bg img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation: none !important;
+    top: 0 !important;
+    height: 100% !important;
+    object-position: top right !important;
+    transform: scale(1.04) !important;
+    transform-origin: top right !important;
+}
+
+body.neoxweb-site:not(.home-page) .hero-section--pro .hero-bg-overlay {
+    z-index: 2 !important;
+}
+
+body.neoxweb-site:not(.home-page) .hero-section--pro .hero-globe-orbit {
+    z-index: 2 !important;
+}
+
+/* Content above background */
+body.neoxweb-site:not(.home-page) .hero-section--pro > .container,
+body.neoxweb-site:not(.home-page) .hero-section--pro > .ui-container,
+body.neoxweb-site:not(.home-page) .hero-section--pro > .cs-container,
+body.neoxweb-site:not(.home-page) .hero-section--pro > .web-hero-grid,
+body.neoxweb-site:not(.home-page) .hero-section--pro > .svc-banner-hero__inner,
+body.neoxweb-site:not(.home-page) .hero-section--pro > .nx-hero-img__inner,
+body.neoxweb-site:not(.home-page) .hero-section--pro > .contact-hero-inner,
+body.neoxweb-site:not(.home-page) .hero-section--pro .nx-page-hero__inner {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    max-width: min(1200px, calc(100% - 2rem));
+    margin-inline: auto;
+    padding-top: calc(var(--nav-h, 72px) + clamp(1.75rem, 4vw, 2.75rem)) !important;
+    padding-inline: clamp(1rem, 3vw, 1.5rem);
+}
+
+body.neoxweb-site:not(.home-page) .hero-section--pro .nx-page-hero__particles {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    opacity: 0.78;
+    pointer-events: none;
+}
+
+/* CSS fallback: purana nx-page-hero__bg markup (agar JS na chale) */
+body.neoxweb-site:not(.home-page) .nx-page-hero:not(.hero-section--pro) {
+    position: relative !important;
+    min-height: min(100vh, 920px) !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    overflow: hidden !important;
+    background: #000 !important;
+}
+
+body.neoxweb-site:not(.home-page) .nx-page-hero__bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    background: #000 !important;
+    background-image: none !important;
+}
+
+body.neoxweb-site:not(.home-page) .nx-page-hero__bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 108%;
+    height: 100%;
+    background: url('../assets/images/neoxweb/hero-bg-new.jpg') top right / cover no-repeat;
+    transform: scale(1.04);
+    transform-origin: top right;
+    animation: none;
+}
+
+body.neoxweb-site:not(.home-page) .nx-page-hero__overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.65) 38%, rgba(0, 0, 0, 0.2) 62%, transparent 85%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, transparent 45%, rgba(0, 0, 0, 0.55) 100%) !important;
+    pointer-events: none;
+}
+
+body.neoxweb-site:not(.home-page) .nx-page-hero__inner,
+body.neoxweb-site:not(.home-page) .nx-page-hero .cs-container,
+body.neoxweb-site:not(.home-page) .nx-page-hero .contact-hero-inner {
+    position: relative;
+    z-index: 3;
+    padding-top: var(--nav-h, 72px);
+}
+
+/* Contact — sirf top hero, full-page bg band */
+body.neoxweb-site.contact-page .contact-page-bg,
+body.neoxweb-site.contact-page .contact-page-overlay {
+    display: none !important;
+}
+
+body.neoxweb-site.contact-page .contact-page-hero.hero-section--pro {
+    background: #000 !important;
+}
+
+/* Beat conflicting stylesheets */
+body.ui-ref-theme .ui-hero--inner.hero-section--pro,
+body.ui-ref-theme .web-hero.hero-section--pro {
+    background: #000 !important;
+    min-height: clamp(420px, 58vh, 620px) !important;
+}
+
+body.ui-ref-theme .web-hero.hero-section--pro::before {
+    display: none !important;
+}
+
+.svc-banner-hero.hero-section--pro {
+    background: #000 !important;
+    min-height: clamp(420px, 58vh, 620px) !important;
+}
+
+.nx-hero-img.hero-section--pro {
+    background: #000 !important;
+    min-height: clamp(420px, 58vh, 620px) !important;
+}
+
+body.case-study-page .cs-index-hero.hero-section--pro,
+body.neoxweb-site.case-study-page .cs-index-hero.hero-section--pro {
+    background: #000 !important;
+    min-height: clamp(420px, 58vh, 620px) !important;
+    border-bottom: none !important;
+    padding: 0 0 clamp(3rem, 6vw, 4rem) !important;
+}
+
+body.neoxweb-site.case-study-page .cs-index-hero.hero-section--pro .nx-page-hero__bg,
+body.neoxweb-site.case-study-page .cs-index-hero.hero-section--pro .nx-page-hero__overlay {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    body.neoxweb-site:not(.home-page) .hero-section--pro,
+    body.neoxweb-site:not(.home-page) .nx-page-hero:not(.hero-section--pro) {
+        min-height: clamp(380px, 52vh, 520px) !important;
+        padding-top: 0 !important;
+    }
+
+    body.nx-app-body .nx-page-hero.hero-section--pro,
+    body.nx-app-body .contact-page-hero.hero-section--pro,
+    body.nx-app-body .cs-index-hero.hero-section--pro,
+    body.nx-app-body .svc-banner-hero.hero-section--pro,
+    body.nx-app-body .web-hero.hero-section--pro,
+    body.nx-app-body .ui-hero--inner.hero-section--pro {
+        min-height: clamp(380px, 52vh, 520px) !important;
+        padding: 0 0 clamp(2rem, 4vw, 2.5rem) !important;
+    }
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Fintech dashboard">
+  <defs>
+    <linearGradient id="fg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <linearGradient id="fg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#fg2)"/>
+  <rect x="60" y="80" width="680" height="340" rx="28" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+  <rect x="100" y="120" width="160" height="100" rx="14" fill="url(#fg1)" opacity="0.9"/>
+  <rect x="280" y="120" width="160" height="100" rx="14" fill="rgba(255,255,255,0.06)"/>
+  <rect x="460" y="120" width="240" height="100" rx="14" fill="rgba(255,255,255,0.06)"/>
+  <rect x="100" y="250" width="600" height="140" rx="16" fill="rgba(255,255,255,0.04)"/>
+  <rect x="130" y="310" width="50" height="60" rx="6" fill="#06b6d4" opacity="0.8"/>
+  <rect x="200" y="280" width="50" height="90" rx="6" fill="#4ade80" opacity="0.8"/>
+  <rect x="270" y="300" width="50" height="70" rx="6" fill="#10b981" opacity="0.8"/>
+  <rect x="340" y="260" width="50" height="110" rx="6" fill="#06b6d4" opacity="0.6"/>
+  <rect x="410" y="290" width="50" height="80" rx="6" fill="#4ade80" opacity="0.6"/>
+</svg>

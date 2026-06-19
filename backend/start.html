@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEOXWEB Backend</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Inter, system-ui, sans-serif;
+            background: #020617;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+        .card {
+            width: 100%;
+            max-width: 520px;
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        h1 { margin: 0 0 0.5rem; font-size: 1.5rem; }
+        p { color: #94a3b8; margin: 0 0 1.5rem; line-height: 1.6; }
+        a {
+            display: block;
+            padding: 0.85rem 1rem;
+            margin-bottom: 0.65rem;
+            border-radius: 0.65rem;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+        }
+        .primary { background: linear-gradient(90deg, #059669, #10b981); color: #022c22; }
+        .secondary { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; }
+        .muted { font-size: 0.8rem; color: #64748b; margin-top: 1rem; text-align: center; }
+        code { color: #6ee7b7; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>NEOXWEB Backend</h1>
+        <p>XAMPP Apache + MySQL on karein, phir neeche se link open karein.</p>
+        <a class="primary" href="index.php">Admin Login</a>
+        <a class="secondary" href="install.php">Install Database (pehli baar)</a>
+        <a class="secondary" href="panel.php">Admin Panel (Dashboard)</a>
+        <a class="secondary" href="api/health.php">API Health Check</a>
+        <a class="secondary" href="../project/index.html">← Website</a>
+        <p class="muted">Login: <code>admin</code> / <code>admin123</code></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "name": "NEOXWEB — Digital Growth Pakistan",
+  "short_name": "NEOXWEB",
+  "description": "Web development, SEO, PPC & social media — grow your business online in Pakistan.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0a0a",
+  "theme_color": "#030806",
+  "lang": "en",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "assets/pwa/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/pwa/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact",
+      "url": "./contact.html",
+      "description": "Send a message to NEOXWEB"
+    },
+    {
+      "name": "Services",
+      "url": "./services.html",
+      "description": "Our services"
+    }
+  ]
+}

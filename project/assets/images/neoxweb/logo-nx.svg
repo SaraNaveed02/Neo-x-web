@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 52" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="nxGreen" x1="0" y1="52" x2="132" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16a34a"/>
+      <stop offset="1" stop-color="#4ade80"/>
+    </linearGradient>
+  </defs>
+  <!-- pixel accents -->
+  <rect x="4" y="5" width="6" height="6" fill="#4ade80"/>
+  <rect x="12" y="3" width="4" height="4" fill="#22c55e" opacity="0.9"/>
+  <rect x="2" y="13" width="4" height="4" fill="#4ade80" opacity="0.75"/>
+  <rect x="8" y="11" width="3" height="3" fill="#86efac" opacity="0.6"/>
+  <!-- orbit swoosh -->
+  <path d="M6 34 C30 10, 78 8, 126 28" stroke="url(#nxGreen)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+  <path d="M8 38 C34 16, 74 14, 122 32" stroke="#4ade80" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.35"/>
+  <!-- N -->
+  <path d="M20 38 V16" stroke="#111111" stroke-width="5.2" stroke-linecap="round"/>
+  <path d="M20 16 L38 38" stroke="#111111" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 38 V16" stroke="#111111" stroke-width="5.2" stroke-linecap="round"/>
+  <path d="M20 22 H28" stroke="#22c55e" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
+  <path d="M20 28 H30" stroke="#4ade80" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+  <!-- X -->
+  <path d="M52 16 L66 38 M66 16 L52 38" stroke="#111111" stroke-width="5.2" stroke-linecap="round"/>
+  <path d="M54 20 L64 34" stroke="url(#nxGreen)" stroke-width="2.8" stroke-linecap="round"/>
+</svg>

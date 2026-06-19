@@ -1,0 +1,392 @@
+/**
+ * NEOXWEB — Premium agency redesign layer
+ * Same green/black palette · modern spacing, hierarchy, motion
+ */
+
+/* ── Design tokens ── */
+.neoxweb-site {
+    --nx-section-y: clamp(3.5rem, 7vw, 6rem);
+    --nx-radius-lg: 20px;
+    --nx-radius-md: 14px;
+    --nx-shadow-card: 0 4px 24px rgba(0, 0, 0, 0.22);
+    --nx-shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(74, 222, 128, 0.1);
+    --nx-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Global typography & rhythm ── */
+.neoxweb-site main {
+    letter-spacing: -0.01em;
+}
+
+.neoxweb-site .section-padding {
+    padding-block: var(--nx-section-y);
+    position: relative;
+}
+
+.neoxweb-site .section-padding:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: min(var(--nx-container, min(1180px, calc(100% - 2.5rem))), 100%);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+    pointer-events: none;
+}
+
+.neoxweb-site .section-padding.dark-bg::after {
+    background: linear-gradient(90deg, transparent, rgba(74, 222, 128, 0.12), transparent);
+}
+
+.neoxweb-site .section-header {
+    margin-bottom: clamp(2rem, 4vw, 2.75rem);
+}
+
+.neoxweb-site .section-header h2 strong {
+    font-weight: inherit;
+    color: #fff;
+}
+
+/* Scroll reveal — content visible by default (see animations.css) */
+.neoxweb-site .fade-up.revealed,
+.neoxweb-site .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.neoxweb-site .fade-up.delay-1 { transition-delay: 0.08s; }
+.neoxweb-site .fade-up.delay-2 { transition-delay: 0.16s; }
+.neoxweb-site .fade-up.delay-3 { transition-delay: 0.24s; }
+
+/* ── Hero (particles only) ── */
+.hero-section--pro .hero-globe-orbit,
+.hero-section--neoxweb .hero-globe-orbit {
+    display: none !important;
+}
+
+.hero-section--pro .hero-neoxweb-bg {
+    display: none !important;
+}
+
+.hero-section--pro .hero-particles-canvas {
+    z-index: 2;
+    opacity: 0.7;
+    mix-blend-mode: screen;
+}
+
+.hero-section--pro .hero-bg-overlay {
+    z-index: 1;
+    background:
+        linear-gradient(105deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.72) 42%, rgba(0, 0, 0, 0.35) 68%, rgba(0, 0, 0, 0.15) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, transparent 40%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.hero-section--pro .hero-copy {
+    padding-bottom: clamp(3rem, 8vw, 5rem);
+}
+
+.hero-section--pro .hero-title {
+    font-weight: 800;
+    line-height: 1.08;
+    text-shadow: 0 2px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero-section--pro .hero-text {
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.65;
+}
+
+.btn-hero-primary {
+    background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+    border-color: transparent;
+    color: #0a0a0a !important;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.btn-hero-outline {
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* ── Service cards ── */
+.neoxweb-site .neox-service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.neoxweb-site .neox-service-card {
+    border-radius: var(--nx-radius-lg);
+    background: linear-gradient(160deg, rgba(22, 22, 22, 0.95), rgba(12, 12, 12, 0.98));
+    transition: transform 0.35s var(--nx-ease), box-shadow 0.35s var(--nx-ease), border-color 0.35s ease;
+}
+
+.neoxweb-site .neox-service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--nx-shadow-hover);
+}
+
+/* ── Process timeline ── */
+.neoxweb-site .nx-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    counter-reset: nxstep;
+}
+
+.neoxweb-site .nx-process-card {
+    position: relative;
+    padding: 1.65rem 1.5rem;
+    border-radius: var(--nx-radius-md);
+    background: rgba(14, 14, 14, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: border-color 0.3s ease, transform 0.3s var(--nx-ease);
+}
+
+.neoxweb-site .nx-process-card:hover {
+    border-color: rgba(74, 222, 128, 0.22);
+    transform: translateY(-3px);
+}
+
+.neoxweb-site .nx-process-card__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 8px;
+    background: rgba(74, 222, 128, 0.12);
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.neoxweb-site .nx-process-card h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+}
+
+.neoxweb-site .nx-process-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+/* ── Why cards ── */
+.neoxweb-site .nx-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.neoxweb-site .nx-why-card {
+    padding: 2rem 1.75rem;
+    border-radius: var(--nx-radius-lg);
+    background: linear-gradient(145deg, rgba(18, 18, 18, 0.9), rgba(10, 10, 10, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.35s var(--nx-ease), border-color 0.35s ease;
+}
+
+.neoxweb-site .nx-why-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(74, 222, 128, 0.2);
+}
+
+.neoxweb-site .nx-why-card h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.65rem;
+}
+
+.neoxweb-site .nx-why-card p {
+    margin: 0;
+    font-size: 0.94rem;
+    line-height: 1.65;
+    color: var(--muted);
+}
+
+/* ── Project / case study cards ── */
+.neoxweb-site .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.neoxweb-site .project-card {
+    border-radius: var(--nx-radius-lg);
+    overflow: hidden;
+    transition: transform 0.35s var(--nx-ease), box-shadow 0.35s ease;
+}
+
+.neoxweb-site .project-card .project-copy span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.neoxweb-site .project-card .project-copy h3 {
+    font-size: 1.15rem;
+    line-height: 1.35;
+    margin: 0.5rem 0 0;
+}
+
+/* ── Testimonials ── */
+.neoxweb-site .testimonial-section {
+    background: linear-gradient(180deg, transparent, rgba(74, 222, 128, 0.03), transparent);
+}
+
+.neoxweb-site .testimonial-slider {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.neoxweb-site .testimonial-slider .slide {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: var(--nx-radius-lg);
+    padding: 1.75rem;
+}
+
+.neoxweb-site .testimonial-slider .slide p {
+    flex: 1;
+    font-style: normal;
+    quotes: none;
+}
+
+.neoxweb-site .testimonial-slider .slide p::before,
+.neoxweb-site .testimonial-slider .slide p::after {
+    content: none;
+}
+
+.neoxweb-site .testimonial-author span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.15rem;
+}
+
+/* ── Team cards ── */
+.neoxweb-site .nx-team-showcase--compact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.neoxweb-site .nx-card {
+    border-radius: var(--nx-radius-lg);
+}
+
+.neoxweb-site .nx-card__body h4 {
+    font-size: 1.05rem;
+    margin: 0 0 0.4rem;
+}
+
+.neoxweb-site .nx-card__body p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--muted);
+}
+
+.neoxweb-site .nx-card__detail {
+    margin-top: 0.5rem;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.58);
+}
+
+/* ── Home CTA band ── */
+.home-cta {
+    padding-block: clamp(3rem, 6vw, 4.5rem);
+    background:
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(74, 222, 128, 0.14), transparent 65%),
+        linear-gradient(180deg, rgba(10, 10, 10, 0.5), rgba(6, 6, 6, 0.95));
+    border-top: 1px solid rgba(74, 222, 128, 0.12);
+}
+
+.home-cta__inner {
+    text-align: center;
+    max-width: 36rem;
+    margin-inline: auto;
+}
+
+.home-cta__inner h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.65rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.home-cta__inner p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 0 0 1.75rem;
+    line-height: 1.6;
+}
+
+/* ── Footer ── */
+.neoxweb-site .site-footer--pro {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: linear-gradient(180deg, #0a0a0a, #050505);
+}
+
+.neoxweb-site .footer-uni__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -0.02em;
+}
+
+.neoxweb-site .footer-uni__col h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+/* ── Inner page heroes ── */
+.neoxweb-site .nx-page-hero,
+.neoxweb-site .svc-banner-hero,
+.neoxweb-site .web-hero {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .neoxweb-site .neox-service-cards,
+    .neoxweb-site .nx-team-showcase--compact {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .neoxweb-site .nx-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .neoxweb-site .neox-service-cards,
+    .neoxweb-site .nx-why-grid,
+    .neoxweb-site .project-grid,
+    .neoxweb-site .testimonial-slider,
+    .neoxweb-site .nx-team-showcase--compact,
+    .neoxweb-site .nx-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section--pro .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-section--pro .hero-actions a {
+        justify-content: center;
+        text-align: center;
+    }
+}

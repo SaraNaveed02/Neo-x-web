@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="NEOXWEB NX">
+  <defs>
+    <linearGradient id="nxGrad" x1="64" y1="448" x2="448" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22c55e"/>
+      <stop offset="0.5" stop-color="#4ade80"/>
+      <stop offset="1" stop-color="#a3e635"/>
+    </linearGradient>
+    <linearGradient id="nxLight" x1="128" y1="128" x2="384" y2="384" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="108" fill="#030806"/>
+  <rect x="16" y="16" width="480" height="480" rx="96" stroke="url(#nxGrad)" stroke-width="8" fill="none" opacity="0.85"/>
+  <!-- N -->
+  <path d="M128 352 V160 M128 160 L224 352 M224 352 V160" stroke="url(#nxLight)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M128 352 V160 M128 160 L224 352 M224 352 V160" stroke="url(#nxGrad)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+  <!-- X -->
+  <path d="M288 160 L384 352 M384 160 L288 352" stroke="url(#nxLight)" stroke-width="36" stroke-linecap="round"/>
+  <path d="M288 160 L384 352 M384 160 L288 352" stroke="url(#nxGrad)" stroke-width="10" stroke-linecap="round" opacity="0.5"/>
+  <circle cx="336" cy="256" r="14" fill="#4ade80"/>
+</svg>

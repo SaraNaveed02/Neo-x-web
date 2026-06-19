@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="theme-color" content="#020617">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Nexura — Links &amp; Setup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: Inter, sans-serif; -webkit-tap-highlight-color: transparent; }
+        .tap { min-height: 58px; touch-action: manipulation; active:opacity-90; }
+    </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen p-4 pb-12">
+
+    <header class="text-center pt-5 pb-6 max-w-md mx-auto">
+        <h1 class="text-2xl font-extrabold bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent">NEXURA</h1>
+        <p class="text-slate-400 text-sm mt-1">Mobile App + Links</p>
+    </header>
+
+    <!-- MOBILE APP -->
+    <section class="max-w-md mx-auto mb-6">
+        <p class="text-xs uppercase tracking-wider text-violet-400 font-bold px-1 mb-2">📱 Mobile App — Yahan se shuru karein</p>
+        <a href="project/app.html" class="tap flex items-center gap-4 w-full px-5 py-4 rounded-2xl bg-gradient-to-r from-violet-600/30 to-emerald-600/20 border-2 border-violet-500/50 mb-3">
+            <span class="w-12 h-12 rounded-xl bg-violet-500/30 flex items-center justify-center text-violet-300 text-xl"><i class="fas fa-mobile-screen-button"></i></span>
+            <span>
+                <strong class="block text-violet-100">Nexura App (Bootstrap 5)</strong>
+                <span class="text-violet-300/80 text-sm">Home · Resources · Studies · Industry</span>
+            </span>
+        </a>
+        <div class="grid grid-cols-3 gap-2 mb-3">
+            <a href="project/resources.html" class="tap text-center py-3 rounded-xl bg-slate-900 border border-slate-800 text-xs text-violet-300">Resources</a>
+            <a href="project/studies.html" class="tap text-center py-3 rounded-xl bg-slate-900 border border-slate-800 text-xs text-emerald-300">Studies</a>
+            <a href="project/industry.html" class="tap text-center py-3 rounded-xl bg-slate-900 border border-slate-800 text-xs text-sky-300">Industry</a>
+        </div>
+    </section>
+
+    <!-- API Status -->
+    <div id="apiStatus" class="max-w-md mx-auto mb-6 p-4 rounded-2xl bg-slate-900 border border-slate-800 text-sm">
+        <div class="flex items-center gap-2 text-slate-400">
+            <i class="fas fa-spinner fa-spin"></i> Checking API &amp; database...
+        </div>
+    </div>
+
+    <!-- STEP 1: Install -->
+    <section class="max-w-md mx-auto mb-6">
+        <p class="text-xs uppercase tracking-wider text-amber-400 font-bold px-1 mb-2">Step 1 — Pehle yeh karein</p>
+        <a href="backend/install.php" class="tap flex items-center gap-4 w-full px-5 py-4 rounded-2xl bg-amber-500/10 border-2 border-amber-500/40">
+            <span class="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center text-amber-400 text-xl"><i class="fas fa-database"></i></span>
+            <span>
+                <strong class="block text-amber-200">Install Database</strong>
+                <span class="text-amber-400/80 text-sm">Click → Install Database Now</span>
+            </span>
+        </a>
+        <a href="backend/confirm.php" class="tap flex items-center gap-4 w-full px-5 py-4 mt-2 rounded-2xl bg-emerald-500/10 border-2 border-emerald-500/40">
+            <span class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl"><i class="fas fa-check-circle"></i></span>
+            <span>
+                <strong class="block text-emerald-200">Backend Confirmation</strong>
+                <span class="text-emerald-400/80 text-sm">13 APIs test — 100% ready check</span>
+            </span>
+        <a href="CLIENT-WHATSAPP.md" class="tap flex items-center gap-4 w-full px-5 py-4 mt-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/30">
+            <span class="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center text-cyan-400 text-xl"><i class="fab fa-whatsapp"></i></span>
+            <span>
+                <strong class="block text-cyan-200">Client ko WhatsApp par bhejna</strong>
+                <span class="text-cyan-400/80 text-sm">CLIENT-WHATSAPP.md + pack-for-client.ps1</span>
+            </span>
+        </a>
+    </section>
+
+        <a href="project/index.html" class="tap flex items-center gap-4 px-5 py-4 rounded-2xl bg-slate-900 border border-slate-800">
+            <span class="w-11 h-11 rounded-xl bg-violet-500/20 flex items-center justify-center text-violet-400"><i class="fas fa-home"></i></span>
+            <span><strong class="block">Home</strong><span class="text-slate-400 text-sm">Main website</span></span>
+        </a>
+
+        <a href="project/contact.html" class="tap flex items-center gap-4 px-5 py-4 rounded-2xl bg-slate-900 border border-slate-800">
+            <span class="w-11 h-11 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400"><i class="fas fa-envelope"></i></span>
+            <span><strong class="block">Contact / Message</strong><span class="text-slate-400 text-sm">Backend admin mein show hoga</span></span>
+        </a>
+
+        <a href="project/login.html" class="tap flex items-center gap-4 px-5 py-4 rounded-2xl bg-slate-900 border border-slate-800">
+            <span class="w-11 h-11 rounded-xl bg-cyan-500/20 flex items-center justify-center text-cyan-400"><i class="fas fa-user"></i></span>
+            <span><strong class="block">Signup / Login / Google</strong><span class="text-slate-400 text-sm">Users admin mein dikhenge</span></span>
+        </a>
+
+        <p class="text-xs uppercase tracking-wider text-slate-500 font-semibold px-1 pt-4">Backend Admin</p>
+
+        <a href="backend/admin/login.php" class="tap flex items-center gap-4 px-5 py-4 rounded-2xl bg-gradient-to-r from-violet-600/25 to-emerald-600/15 border border-violet-500/30">
+            <span class="w-11 h-11 rounded-xl bg-violet-500/30 flex items-center justify-center text-violet-300"><i class="fas fa-shield-halved"></i></span>
+            <span>
+                <strong class="block">Admin Panel Login</strong>
+                <span class="text-slate-300 text-sm">Admin panel — login credentials alag file mein</span>
+            </span>
+        </a>
+
+        <a href="backend/admin/dashboard.php" class="tap flex items-center gap-4 px-5 py-4 rounded-2xl bg-slate-900 border border-slate-800">
+            <span class="w-11 h-11 rounded-xl bg-violet-500/20 flex items-center justify-center text-violet-400"><i class="fas fa-chart-pie"></i></span>
+            <span><strong class="block">Dashboard</strong><span class="text-slate-400 text-sm">Users, messages, logins</span></span>
+        </a>
+
+        <a href="backend/admin/messages.php" class="tap flex items-center gap-4 px-5 py-4 rounded-2xl bg-slate-900 border border-slate-800">
+            <span class="w-11 h-11 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400"><i class="fas fa-inbox"></i></span>
+            <span><strong class="block">Messages</strong><span class="text-slate-400 text-sm">Frontend se aaye messages</span></span>
+        </a>
+
+        <a href="backend/admin/users.php" class="tap flex items-center gap-4 px-5 py-4 rounded-2xl bg-slate-900 border border-slate-800">
+            <span class="w-11 h-11 rounded-xl bg-cyan-500/20 flex items-center justify-center text-cyan-400"><i class="fas fa-users"></i></span>
+            <span><strong class="block">Users</strong><span class="text-slate-400 text-sm">Signup + Google users</span></span>
+        </a>
+
+        <a href="backend/api/health.php" class="tap flex items-center gap-4 px-5 py-4 rounded-2xl bg-slate-900 border border-slate-800">
+            <span class="w-11 h-11 rounded-xl bg-slate-700 flex items-center justify-center"><i class="fas fa-heart-pulse text-slate-300"></i></span>
+            <span><strong class="block">API Health Check</strong><span class="text-slate-400 text-sm">Sab APIs test</span></span>
+        </a>
+    </section>
+
+    <footer class="max-w-md mx-auto mt-8 text-center text-slate-600 text-xs leading-relaxed">
+        XAMPP Apache + MySQL ON hona chahiye.<br>
+        Database file: <code class="text-slate-400">backend/database/db.sql</code>
+    </footer>
+
+    <script>
+        fetch('/time/backend/api/health.php')
+            .then(r => r.json())
+            .then(d => {
+                const el = document.getElementById('apiStatus');
+                const ok = d.success && d.data?.checks?.database && d.data?.checks?.admin_user;
+                if (ok) {
+                    el.innerHTML = '<div class="flex items-center gap-2 text-emerald-400"><i class="fas fa-check-circle"></i> <strong>API + Database OK</strong> — sab kaam karega</div>';
+                    el.className = 'max-w-md mx-auto mb-6 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-sm';
+                } else {
+                    el.innerHTML = '<div class="text-amber-300"><i class="fas fa-exclamation-triangle"></i> <strong>Database install karein!</strong><br><a href="backend/install.php" class="underline">Open Install Page</a></div>';
+                    el.className = 'max-w-md mx-auto mb-6 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-sm';
+                }
+            })
+            .catch(() => {
+                document.getElementById('apiStatus').innerHTML = '<div class="text-red-400"><i class="fas fa-times-circle"></i> Apache OFF hai — XAMPP start karein</div>';
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+-- Redirect: use abs.sql for the complete database
+-- This file kept for backward compatibility — same as abs.sql
+-- Import: backend/database/abs.sql

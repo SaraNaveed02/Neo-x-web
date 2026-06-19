@@ -1,0 +1,12 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /profile.html
+
+Disallow: /404.html
+
+
+
+Sitemap: https://neoxweb.netlify.app/sitemap.xml
+

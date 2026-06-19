@@ -1,0 +1,500 @@
+/**
+ * Mobile-only Unified-style app dock (screenshot reference)
+ * Desktop / laptop par apply NAHI hota — sirf body.nx-app-body @ 900px
+ */
+
+@media (max-width: 900px) {
+    body.nx-app-body #navbar-container,
+    body.nx-app-body #mainNavbar {
+        display: none !important;
+    }
+
+    body.nx-app-body #nxFixedLogin,
+    body.nx-app-body .nx-fixed-login {
+        display: none !important;
+    }
+
+    body.nx-app-body .nx-quick-nav {
+        display: none !important;
+    }
+
+    body.nx-app-body {
+        padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0)) !important;
+    }
+
+    /* Hide case study card photos in mobile app */
+    body.nx-app-body .project-card .visual-art-wrap,
+    body.nx-app-body .pr-mini-case .visual-art-wrap,
+    body.nx-app-body .ui-cs-card__media .visual-art-wrap,
+    body.nx-app-body .nx-stack-card > .visual-art-wrap,
+    body.nx-app-body .cs-featured-card__media .visual-art-wrap {
+        display: none !important;
+    }
+
+    body.nx-app-body .ui-cs-card__media,
+    body.nx-app-body .cs-featured-card__media {
+        min-height: 0;
+        padding-top: 0;
+    }
+
+    body.nx-app-body .ui-cs-card__tag,
+    body.nx-app-body .nx-stack-card .nx-tag {
+        position: static;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Card images — full box width */
+    body.nx-app-body .svc-vertical-item {
+        overflow: hidden;
+    }
+
+    body.nx-app-body .svc-vertical-item > div:not(.svc-vertical-item__icon) {
+        order: 1;
+    }
+
+    body.nx-app-body .svc-vertical-item__icon {
+        order: 2;
+        max-width: none !important;
+        width: calc(100% + 2.5rem) !important;
+        margin: 0 -1.25rem -1.25rem !important;
+        aspect-ratio: 16 / 10 !important;
+        border-radius: 0 0 1rem 1rem !important;
+    }
+
+    body.nx-app-body .svc-vertical-item__icon .visual-art-wrap {
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        aspect-ratio: unset !important;
+        min-height: 0 !important;
+    }
+
+    body.nx-app-body .svc-vertical-item__icon img,
+    body.nx-app-body .svc-vertical-item__icon .visual-art {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        object-fit: cover !important;
+        padding: 0 !important;
+        filter: none !important;
+    }
+
+    body.nx-app-body .neox-service-card__media {
+        min-height: 11rem;
+    }
+
+    body.nx-app-body .neox-service-card__media .visual-art-wrap,
+    body.nx-app-body .neox-service-card__media .visual-art {
+        padding: 0 !important;
+        object-fit: cover !important;
+        filter: none !important;
+    }
+
+    body.nx-app-body .nx-dense-card img,
+    body.nx-app-body .nx-stack-card img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        display: block;
+    }
+
+    body.nx-app-body .ui-bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1050;
+        background: rgba(5, 5, 8, 0.97);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 0.35rem 0.5rem calc(0.45rem + env(safe-area-inset-bottom, 0));
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 0;
+        min-height: 3.75rem;
+    }
+
+    body.nx-app-body .ui-bottom-nav__fab {
+        flex: 0 0 52px !important;
+        width: 52px !important;
+        height: 52px !important;
+        max-width: 52px !important;
+        border-radius: 50%;
+        background: #fff !important;
+        color: #4f46e5 !important;
+        border: none;
+        cursor: pointer;
+        display: grid !important;
+        place-items: center;
+        margin-bottom: 0.65rem;
+        margin-left: 0.15rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+        padding: 0 !important;
+        text-decoration: none;
+        transform: translateY(-6px);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    body.nx-app-body .ui-bottom-nav__fab.is-active {
+        background: #4f46e5 !important;
+        color: #fff !important;
+        box-shadow: 0 8px 28px rgba(79, 70, 229, 0.55);
+    }
+
+    body.nx-app-body .ui-bottom-nav__fab i {
+        font-size: 1.15rem !important;
+        color: inherit !important;
+    }
+
+    body.nx-app-body .ui-bottom-nav__links {
+        display: flex;
+        flex: 1;
+        align-items: flex-end;
+        justify-content: space-around;
+        gap: 0.1rem;
+        padding-right: 3.5rem;
+    }
+
+    body.nx-app-body .ui-bottom-nav__links a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.52);
+        font-size: 0.5625rem;
+        font-weight: 500;
+        padding: 0.25rem 0.1rem 0.15rem;
+        max-width: 4.25rem;
+        text-align: center;
+        line-height: 1.15;
+        letter-spacing: 0.01em;
+    }
+
+    body.nx-app-body .ui-bottom-nav__links a i {
+        font-size: 1.05rem;
+        opacity: 0.9;
+    }
+
+    body.nx-app-body .ui-bottom-nav__links a.active,
+    body.nx-app-body .ui-bottom-nav__links a:hover {
+        color: #fff;
+    }
+
+    body.nx-app-body .ui-chat-fab {
+        display: none !important;
+    }
+
+    body.nx-app-body .nx-wa-fab {
+        display: grid !important;
+        bottom: calc(7.25rem + env(safe-area-inset-bottom, 0px)) !important;
+        right: 0.85rem !important;
+        z-index: 10550;
+        width: 68px !important;
+        height: 68px !important;
+        font-size: 2.15rem !important;
+    }
+
+    /* Unified-style mobile top bar */
+    body.nx-app-body .nx-app-header.ui-mobile-header {
+        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0.85rem;
+        background: rgba(0, 0, 0, 0.92);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    body.nx-app-body .ui-mobile-logo {
+        margin-left: 0;
+        padding-left: 6px;
+        transform: none;
+    }
+
+    body.nx-app-body .ui-mobile-logo img,
+    body.nx-app-body .ui-mobile-logo .navbar__logo-img--nx {
+        height: 58px !important;
+        width: auto !important;
+        max-height: 58px !important;
+        object-fit: contain;
+        object-position: left center;
+        display: block;
+        background: transparent;
+    }
+
+    body.nx-app-body .ui-mobile-header__actions {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+    }
+
+    body.nx-app-body .ui-mobile-icon-btn {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        background: transparent;
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 0.95rem;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    body.nx-app-body main,
+    body.nx-app-body .nx-mobile-main {
+        padding-bottom: 0.5rem;
+    }
+
+    body.nx-app-body .nx-page-hero:not(.hero-section--pro),
+    body.nx-app-body .hero-section--neoxweb:not(.hero-section--pro),
+    body.nx-app-body .svc-banner-hero:not(.hero-section--pro),
+    body.nx-app-body .contact-page-hero:not(.hero-section--pro) {
+        padding-top: 0.75rem !important;
+        min-height: auto !important;
+    }
+
+    body.nx-app-body.home-page .hero-section--pro {
+        padding-top: calc(var(--nx-header-h, 3.5rem) + var(--nx-safe-top, 0px) + 0.2rem) !important;
+        align-items: flex-start !important;
+        min-height: auto !important;
+    }
+
+    body.nx-app-body.home-page .hero-grid--bg {
+        align-items: flex-start !important;
+        min-height: auto !important;
+    }
+
+    body.nx-app-body .nx-hide-mobile {
+        display: none !important;
+    }
+
+    /* Full sitemap footer — scroll ke end par (screenshot jaisa) */
+    body.nx-app-body .site-footer.site-footer--pro {
+        display: block !important;
+        margin-top: 0;
+        padding-bottom: calc(3.85rem + env(safe-area-inset-bottom, 0));
+    }
+
+    body.nx-app-body .site-footer .footer-pro__brand {
+        display: none;
+    }
+
+    body.nx-app-body .site-footer .footer-pro__main {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        padding: 2rem 1.25rem 1.25rem;
+    }
+
+    body.nx-app-body .site-footer .footer-pro__col h4 {
+        font-size: 0.9375rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        text-transform: none;
+        color: #fff;
+        margin-bottom: 0.85rem;
+    }
+
+    body.nx-app-body .site-footer .footer-pro__col a {
+        font-size: 0.9375rem;
+        padding: 0.4rem 0;
+        color: rgba(255, 255, 255, 0.72);
+    }
+
+    body.nx-app-body .site-footer .footer-pro__contact p {
+        font-size: 0.9375rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    body.nx-app-body .site-footer .footer-pro__contact p:first-of-type::before {
+        content: '\f0e0';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        color: #4ade80;
+        font-size: 0.875rem;
+    }
+
+    body.nx-app-body .site-footer .footer-pro__contact p:nth-of-type(2)::before {
+        content: '\f095';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        color: #4ade80;
+        font-size: 0.875rem;
+    }
+
+    body.nx-app-body .site-footer .footer-pro__bottom {
+        padding: 1rem 1.25rem 0.5rem;
+    }
+
+    body.nx-app-body #pwaInstallBanner {
+        bottom: calc(4.5rem + env(safe-area-inset-bottom, 0));
+    }
+
+    /* AI chatbot panel */
+    body.nx-app-body .nx-ai-chat {
+        position: fixed;
+        inset: 0;
+        z-index: 10600;
+        pointer-events: none;
+    }
+
+    body.nx-app-body .nx-ai-chat__panel {
+        position: absolute;
+        left: 0.75rem;
+        bottom: calc(4.5rem + env(safe-area-inset-bottom, 0));
+        width: min(340px, calc(100vw - 1.5rem));
+        max-height: min(420px, 58vh);
+        display: flex;
+        flex-direction: column;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(16px) scale(0.96);
+        transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s;
+        pointer-events: auto;
+    }
+
+    body.nx-app-body .nx-ai-chat.is-open .nx-ai-chat__panel {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+    }
+
+    body.nx-app-body .nx-ai-chat__head {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        padding: 0.85rem 1rem;
+        background: linear-gradient(135deg, #4f46e5, #6366f1);
+        color: #fff;
+    }
+
+    body.nx-app-body .nx-ai-chat__head-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+    }
+
+    body.nx-app-body .nx-ai-chat__head strong {
+        display: block;
+        font-size: 0.9375rem;
+        line-height: 1.2;
+    }
+
+    body.nx-app-body .nx-ai-chat__head span {
+        font-size: 0.6875rem;
+        opacity: 0.88;
+    }
+
+    body.nx-app-body .nx-ai-chat__close {
+        margin-left: auto;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.35rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0.15rem 0.35rem;
+    }
+
+    body.nx-app-body .nx-ai-chat__messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 0.85rem;
+        background: #f9fafb;
+        min-height: 140px;
+        max-height: 240px;
+    }
+
+    body.nx-app-body .nx-ai-chat__bubble {
+        max-width: 88%;
+        padding: 0.65rem 0.85rem;
+        border-radius: 14px;
+        font-size: 0.8125rem;
+        line-height: 1.55;
+        margin-bottom: 0.5rem;
+    }
+
+    body.nx-app-body .nx-ai-chat__bubble--bot {
+        background: #ffffff;
+        color: #111827;
+        border: 1px solid #e5e7eb;
+        border-bottom-left-radius: 4px;
+    }
+
+    body.nx-app-body .nx-ai-chat__bubble--user {
+        margin-left: auto;
+        background: #4f46e5;
+        color: #fff;
+        border-bottom-right-radius: 4px;
+    }
+
+    body.nx-app-body .nx-ai-chat__foot {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.65rem;
+        background: #fff;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    body.nx-app-body .nx-ai-chat__foot input {
+        flex: 1;
+        border: 1px solid #e5e7eb;
+        border-radius: 999px;
+        padding: 0.55rem 0.9rem;
+        font-size: 0.8125rem;
+        outline: none;
+        color: #111827 !important;
+        background: #ffffff !important;
+        -webkit-text-fill-color: #111827 !important;
+        caret-color: #111827 !important;
+    }
+
+    body.nx-app-body .nx-ai-chat__foot input::placeholder {
+        color: #9ca3af !important;
+        -webkit-text-fill-color: #9ca3af !important;
+        opacity: 1;
+    }
+
+    body.nx-app-body .nx-ai-chat__foot input:focus {
+        border-color: #4f46e5;
+    }
+
+    body.nx-app-body .nx-ai-chat__foot button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background: #4f46e5;
+        color: #fff;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media (min-width: 901px) {
+    body.nx-app-body .ui-bottom-nav,
+    body.nx-app-body .ui-chat-fab,
+    body.nx-app-body #nxAppHeader,
+    body.nx-app-body .nx-ai-chat {
+        display: none !important;
+    }
+}
+
