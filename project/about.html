@@ -65,6 +65,20 @@
     <link rel="stylesheet" href="css/site-rows-final.css">
     <link rel="stylesheet" href="css/home-hero-final.css">
     <link rel="stylesheet" href="css/nx-images-global.css">
+    <style>
+    .about-page .nx-pro-split__media--full {
+        min-height: clamp(340px, 39vw, 560px);
+        align-items: stretch;
+        margin-top: 90px;
+    }
+    .about-page .nx-pro-split__media--full img {
+        width: auto !important;
+        max-width: 100% !important;
+        height: 100% !important;
+        max-height: none !important;
+        object-fit: contain !important;
+    }
+    </style>
     <script defer src="js/hero-premium.js"></script>
     <script defer src="js/hero-particles.js"></script>
     <script src="js/row-layout.js" defer></script>
@@ -105,7 +119,7 @@
             </div>
         </section>
 
-        <section class="section-padding dark-bg">
+        <section class="section-padding dark-bg  ">
             <div class="container">
                 <div class="nx-pro-split fade-up">
                     <div class="nx-pro-split__body">
@@ -126,7 +140,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="nx-pro-split__media nx-pro-split__media--full">
+                    <div class="nx-pro-split__media nx-pro-split__media--full ">
                         <img src="assets/images/neoxweb/portfolio-web.jpg" alt="Professional websites built by NEOXWEB" class="nx-photo" width="800" height="550" loading="lazy">
                     </div>
                 </div>
@@ -158,13 +172,15 @@
                         <div class="nx-team-card__img"><img src="assets/images/neoxweb/social-media-new.jpg" alt="Jason — Video Editor" class="nx-photo" width="400" height="300" loading="lazy"></div>
                     </article>
                 </div>
-                <div class="text-center fade-up" style="margin-top:1.5rem">
+                <div class="fade-up" style="margin-top:1.5rem; text-align:left;">
                     <a href="team.html" class="btn btn-neoxweb btn-large">View Full Team <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
 
-        <section class="section-padding dark-bg">
+        <section class="section-padding dark-bg" >
+        
+        
             <div class="container">
                 <div class="nx-pro-split fade-up">
                     <div class="nx-pro-split__body">
@@ -184,10 +200,11 @@
                                 <span><strong>3x ROI Increase</strong>PPC Campaign for BoltSolar</span>
                             </li>
                         </ul>
-                        <a href="portfolio.html" class="btn btn-neoxweb btn-large" style="margin-top:0.5rem">View Our Work <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="portfolio.html" class="btn btn-neoxweb btn-large" style="margin-top:1.5rem ;text-align: center;">View Our Work <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
-                    <div class="nx-pro-split__media nx-pro-split__media--full">
-                        <img src="assets/images/neoxweb/ppc.jpg" alt="NEOXWEB PPC and marketing results" class="nx-photo" width="800" height="550" loading="lazy">
+                    <div class="nx-pro-split__media nx-pro-split__media--full"
+                    style="height: full; width: full;">
+                        <img src="assets/images/neoxweb/ppc.jpg" alt="NEOXWEB PPC and marketing results" class="nx-photo" width="900" height="900" loading="lazy">
                     </div>
                 </div>
             </div>
