@@ -130,19 +130,3 @@
     .nx-team-showcase.nx-grid--6,
     .nx-team-grid--6 { grid-template-columns: repeat(3, 1fr); }
 }
-
-/* About page split-section image sizing */
- .nx-pro-split {
-    align-items: center !important;
-}
-
- .nx-pro-split__media--full {
-    min-height: clamp(320px, 36vw, 540px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nx-pro-split__media--full img {
-    max-height: min(540px, 66vw) !important;
-}
