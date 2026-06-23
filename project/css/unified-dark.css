@@ -216,7 +216,7 @@ body.ui-ref-theme .ui-mobile-nav a {
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: #000;
+    background: linear-gradient(135deg, var(--pa-green-mid) 0%, var(--pa-green) 50%, #86efac 100%);
     z-index: -1;
 }
 
