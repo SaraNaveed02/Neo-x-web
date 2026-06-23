@@ -103,11 +103,25 @@
 }
 
 /* ── Shared pro split (text left, image right) ── */
-.nx-pro-split {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-    gap: clamp(1.5rem, 4vw, 3.5rem);
+.nx-portfolio-row {
+    display: flex;
     align-items: center;
+    gap: 2rem;
+}
+
+.nx-portfolio-row__copy {
+    flex: 1;
+}
+
+.nx-portfolio-row__media {
+    flex: 1;
+    width: 100%;
+}
+
+.nx-portfolio-row__media img {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .nx-pro-split__body {
@@ -231,15 +245,14 @@
     gap: 0;
 }
 
-.nx-portfolio-row {
-    display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+.n.x-portfolio-row {
+    display: flex;
+    
     gap: clamp(1.5rem, 4vw, 3rem);
     align-items: center;
     padding: clamp(2rem, 4vw, 3rem) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
-
 .nx-portfolio-row:last-child {
     border-bottom: none;
 }

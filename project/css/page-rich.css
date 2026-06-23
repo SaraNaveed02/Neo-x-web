@@ -136,5 +136,17 @@
 
 .pr-reveal { opacity: 1; transform: translateY(0); transition: opacity 0.6s, transform 0.6s; }
 .pr-reveal.is-visible { opacity: 1; transform: translateY(0); }
+.need-dev {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: clamp(2rem, 4vw, 3rem) 0;
+}
+.need-dev > div {
+    width: min(800px, 100%);
+}
 body.auth-page .auth-rich-main { background: var(--cs-bg, #050508); }
 body.auth-page .auth-layout { min-height: auto; }
