@@ -854,7 +854,7 @@ body.neoxweb-site.case-study-page:has(.cs-portfolio-grid) .cs-container {
 }
 
 .neoxweb-site.service-page .web-tech-strip .container {
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .neoxweb-site.service-page .ui-container.ui-text-center,

@@ -128,3 +128,34 @@
         max-width: 100% !important;
     }
 }
+
+/* Modernization gallery — full-width cover images */
+.neoxweb-site .modernization-grid .svc-showcase-card__img {
+    grid-column: unset !important;
+    grid-row: unset !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    min-height: 0 !important;
+    height: 260px;
+    display: block !important;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.neoxweb-site .modernization-grid .svc-showcase-card__img img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    border-radius: 0 !important;
+}
