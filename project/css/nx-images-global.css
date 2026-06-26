@@ -129,21 +129,136 @@
     }
 }
 
-/* Modernization gallery — full-width cover images */
-.neoxweb-site .modernization-grid .svc-showcase-card__img {
+/* Gallery cards — full-width cover images */
+
+/* Direct cards inside section-modernization — image top, text below */
+.neoxweb-site .section-modernization > .svc-showcase-card {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: unset !important;
+    gap: 0 !important;
+    align-items: stretch !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 18px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    background: #181818 !important;
+    border: 1px solid #333 !important;
+    cursor: pointer;
+}
+
+.neoxweb-site .section-modernization > .svc-showcase-card::before,
+.neoxweb-site .section-modernization > .svc-showcase-card::after {
+    display: none !important;
+}
+
+.neoxweb-site .section-modernization > .svc-showcase-card .svc-showcase-card__img {
     grid-column: unset !important;
     grid-row: unset !important;
     max-width: 100% !important;
     width: 100% !important;
+    height: 220px !important;
+    flex-shrink: 0;
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
     border-radius: 0 !important;
     min-height: 0 !important;
-    height: 260px;
     display: block !important;
-    overflow: hidden;
-    background: #1a1a1a;
+    overflow: hidden !important;
+    background: #1a1a1a !important;
+}
+
+.neoxweb-site .section-modernization > .svc-showcase-card .svc-showcase-card__img img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    border-radius: 0 !important;
+}
+
+.neoxweb-site .section-modernization > .svc-showcase-card figcaption {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    grid-column: unset !important;
+    grid-row: unset !important;
+    z-index: 2 !important;
+    padding: 14px 16px 16px !important;
+    text-align: left !important;
+}
+
+.neoxweb-site .section-modernization > .svc-showcase-card figcaption h3 {
+    color: #fff !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 4px !important;
+    line-height: 1.3 !important;
+}
+
+.neoxweb-site .section-modernization > .svc-showcase-card figcaption p {
+    color: #c9c9c9 !important;
+    font-size: 0.875rem !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+}
+
+.neoxweb-site .section-modernization > .svc-showcase-card:hover figcaption {
+    bottom: auto !important;
+}
+
+.neoxweb-site .section-modernization:not(:has(.modernization-grid)) {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+}
+
+/* modernization-grid — image top, text below */
+.neoxweb-site .modernization-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+}
+
+.neoxweb-site .modernization-grid figure {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+    background: #181818 !important;
+    border: 1px solid #333 !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+}
+
+.neoxweb-site .modernization-grid .svc-showcase-card__img {
+    grid-column: unset !important;
+    grid-row: unset !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 220px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    min-height: 0 !important;
+    display: block !important;
+    overflow: hidden !important;
+    background: #1a1a1a !important;
 }
 
 .neoxweb-site .modernization-grid .svc-showcase-card__img img {
@@ -158,4 +273,36 @@
     object-position: center center !important;
     display: block !important;
     border-radius: 0 !important;
+}
+
+.neoxweb-site .modernization-grid figcaption {
+    position: static !important;
+    padding: 14px 16px 16px !important;
+    text-align: left !important;
+}
+
+.neoxweb-site .modernization-grid figcaption h3 {
+    font-size: 1.05rem !important;
+    margin: 0 0 4px !important;
+    line-height: 1.3 !important;
+}
+
+.neoxweb-site .modernization-grid figcaption p {
+    font-size: 0.875rem !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 992px) {
+    .neoxweb-site .section-modernization:not(:has(.modernization-grid)),
+    .neoxweb-site .modernization-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .neoxweb-site .section-modernization:not(:has(.modernization-grid)),
+    .neoxweb-site .modernization-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
