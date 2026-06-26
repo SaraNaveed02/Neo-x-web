@@ -57,7 +57,61 @@ button {
 table {
   border-collapse: collapse;
 }
+/* Container section background */
+.web-tech-strip {
+  background-color: #0a1410; /* Dark deep green background */
+  padding: 24px 16px;
+  width: 100%;
+}
 
+/* Layout setup */
+.web-tech-strip .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* "Built with" Label styling */
+.web-tech-strip .label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #a3b899; /* Muted greenish grey text */
+  margin-right: 8px;
+}
+
+/* Pill Styling */
+.web-tech-strip .web-tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #12221a; /* Dark translucent pill background */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid #1b3528; /* Thin subtle border */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Dynamic Green Color for Icons */
+.web-tech-strip .web-tech-pill i {
+  color: #4ade80; /* Electric green icons */
+  font-size: 16px;
+}
+
+/* Hover Effect for Pill */
+.web-tech-strip .web-tech-pill:hover {
+  border-color: #2e5c45;
+  background-color: #162d22;
+}
 .container {
   width: 100%;
   max-width: 100%; /* Agar restrict nahi karna toh */
